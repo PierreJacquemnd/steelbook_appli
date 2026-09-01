@@ -1,4 +1,4 @@
-const CACHE_NAME = "steelvault-v3";
+const CACHE_NAME = "steelvault-v4";
 const APP_SHELL = [
   "./",
   "./index.html",

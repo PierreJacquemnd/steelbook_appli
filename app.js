@@ -261,7 +261,10 @@ function renderWishlist() {
   return `
     <div style="display:flex;align-items:baseline;justify-content:space-between;">
       <h1 class="page-title display">Liste d'envie</h1>
-      <button class="text-link-btn" id="import-letterboxd">Importer Letterboxd</button>
+      <div style="display:flex;gap:10px;">
+        <button class="text-link-btn" id="retranslate-titles">Traduire en FR</button>
+        <button class="text-link-btn" id="import-letterboxd">Importer Letterboxd</button>
+      </div>
     </div>
     <p class="page-sub">Recherchez n'importe quel titre via TMDb, ou importez votre watchlist.</p>
 
@@ -403,6 +406,7 @@ function onContentClick(e) {
   if (e.target.closest("#toggle-filters")) { state.showFilters = !state.showFilters; render(); return; }
   if (e.target.closest("#toggle-wish-filters")) { state.showWishFilters = !state.showWishFilters; render(); return; }
   if (e.target.closest("#import-letterboxd")) { openLetterboxdImportModal(); return; }
+  if (e.target.closest("#retranslate-titles")) { retranslateTitles(); return; }
 
   const dismissBtn = e.target.closest("[data-dismiss]");
   if (dismissBtn) { dismissAlert(dismissBtn.dataset.dismiss); return; }
@@ -852,20 +856,22 @@ function openLetterboxdImportModal() {
       if (existingTitles.has(key)) { skipped++; continue; }
       existingTitles.add(key);
 
-      let poster = null, tmdbId = null;
+      let poster = null, tmdbId = null, displayTitle = title, originalTitle = title;
       if (window.TMDb.ready()) {
         try {
           const results = await window.TMDb.search(title);
           const match = results.find((m) => m.year === year) || results[0];
           if (match) {
             tmdbId = match.tmdbId;
+            displayTitle = match.title || title;       // titre en français si TMDb le connaît
+            originalTitle = match.originalTitle || title;
             if (match.posterPath) poster = await window.TMDb.fetchPoster(match.posterPath);
           }
-        } catch { /* on continue sans affiche si TMDb échoue */ }
+        } catch { /* on continue avec le titre du CSV si TMDb échoue */ }
       }
 
       const item = {
-        id: uid(), title, originalTitle: title, year, editor: "",
+        id: uid(), title: displayTitle, originalTitle, year, editor: "",
         support: "Blu-ray 4K", editionType: "Classique", languages: ["VF", "VOSTFR"],
         priority: "Moyenne", steelbookStatus: "En cours", poster, tmdbId,
       };
@@ -878,6 +884,47 @@ function openLetterboxdImportModal() {
     showSaved();
     render();
   });
+}
+
+// ---------- Retraduire les titres existants en français via TMDb ----------
+async function retranslateTitles() {
+  if (!window.TMDb.ready()) {
+    modalShell("Traduire en français", `<div class="tmdb-warning">
+      Configurez votre clé TMDb dans <code>config.js</code> pour utiliser cette fonction.
+    </div>`);
+    return;
+  }
+  modalShell("Traduire en français", `<div id="retranslate-progress"><div class="tmdb-loading">Préparation…</div></div>`);
+  const progressEl = document.getElementById("retranslate-progress");
+
+  const allItems = [
+    ...state.wishlist.map((it) => ({ it, store: "wishlist" })),
+    ...state.collection.map((it) => ({ it, store: "collection" })),
+  ];
+  let updated = 0;
+
+  for (let i = 0; i < allItems.length; i++) {
+    const { it, store } = allItems[i];
+    progressEl.innerHTML = `<div class="tmdb-loading">Vérification ${i + 1} / ${allItems.length}… (${updated} traduits)</div>`;
+    try {
+      const query = it.originalTitle || it.title;
+      const results = await window.TMDb.search(query);
+      const match = results.find((m) => m.year === it.year) || results[0];
+      if (match && match.title && match.title !== it.title) {
+        it.title = match.title;
+        if (!it.originalTitle) it.originalTitle = match.originalTitle;
+        if (!it.poster && !it.photo && match.posterPath) {
+          it.poster = await window.TMDb.fetchPoster(match.posterPath);
+        }
+        await DB.put(store, it);
+        updated++;
+      }
+    } catch { /* on ignore ce titre et on continue avec le suivant */ }
+  }
+
+  progressEl.innerHTML = `<div class="tmdb-loading">Terminé — ${updated} titre(s) mis à jour.</div>`;
+  showSaved();
+  render();
 }
 
 init();
