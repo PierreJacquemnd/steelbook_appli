@@ -58,10 +58,20 @@ async function notify(title, message, link) {
   console.log(`🔔 ${title} — ${message}`);
   if (!NTFY_TOPIC) return;
   try {
-    await fetch(`https://ntfy.sh/${NTFY_TOPIC}`, {
+    // On publie via le corps JSON (pas les en-têtes HTTP) car les en-têtes
+    // n'acceptent que de l'ASCII pur — un titre avec un tiret « — » ou un
+    // accent y provoque une erreur ("ByteString"). Le JSON, lui, supporte
+    // l'unicode sans problème.
+    await fetch("https://ntfy.sh/", {
       method: "POST",
-      headers: { Title: title, ...(link ? { Click: link } : {}), Tags: "cd,dvd" },
-      body: message,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        topic: NTFY_TOPIC,
+        title,
+        message,
+        ...(link ? { click: link } : {}),
+        tags: ["cd", "dvd"],
+      }),
     });
   } catch (err) {
     console.error("Échec envoi ntfy:", err.message);
@@ -177,7 +187,8 @@ async function publishAlertsFeed(newItems) {
   const feedFile = new URL("alerts.json", PUBLIC_DIR);
   let existing = [];
   try {
-    existing = JSON.parse(await readFile(feedFile, "utf-8"));
+    const parsed = JSON.parse(await readFile(feedFile, "utf-8"));
+    existing = Array.isArray(parsed.alerts) ? parsed.alerts : [];
   } catch { /* premier run, fichier pas encore créé */ }
 
   const combined = [...newItems, ...existing]
