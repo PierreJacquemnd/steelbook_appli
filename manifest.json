@@ -1,0 +1,16 @@
+{
+  "name": "SteelVault — Collection Steelbook",
+  "short_name": "SteelVault",
+  "description": "Gérez votre collection de steelbooks, votre liste d'envie et suivez les sorties et bons plans.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d0e10",
+  "theme_color": "#121417",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

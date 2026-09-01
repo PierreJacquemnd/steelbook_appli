@@ -1,0 +1,13 @@
+{
+  "name": "steelvault-scraper",
+  "version": "0.2.0",
+  "type": "module",
+  "description": "Job planifié qui surveille steelbookpro.fr, 4k-ultra-hd.fr et Dealabs (à héberger séparément de la PWA, ex. GitHub Actions).",
+  "scripts": {
+    "check": "node check-releases.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "fast-xml-parser": "^4.5.0"
+  }
+}
