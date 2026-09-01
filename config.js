@@ -13,5 +13,5 @@ window.CONFIG = {
   // Format : https://raw.githubusercontent.com/VOTRE-PSEUDO/VOTRE-DEPOT/main/public-data/alerts.json
   // Laissez vide pour garder les alertes d'exemple tant que le scraper
   // n'a pas encore été mis en place (voir README).
-  ALERTS_FEED_URL: "",
+  ALERTS_FEED_URL: "https://raw.githubusercontent.com/PierreJacquemnd/steelbook_appli/refs/heads/main/public-data/alerts.json",
 };
