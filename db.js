@@ -3,8 +3,8 @@
 // restarting the phone, and works fully offline.
 
 const DB_NAME = "steelvault";
-const DB_VERSION = 1;
-const STORES = ["collection", "wishlist", "alerts", "meta"];
+const DB_VERSION = 2;
+const STORES = ["collection", "wishlist", "alerts", "dismissed", "meta"];
 
 function openDB() {
   return new Promise((resolve, reject) => {

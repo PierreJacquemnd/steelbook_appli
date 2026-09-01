@@ -9,9 +9,9 @@ const seedCollection = [
 ];
 
 const seedWishlist = [
-  { id: "w1", title: "Dune : Deuxième Partie", originalTitle: "Dune: Part Two", year: 2024, editor: "Warner Bros", support: "Blu-ray 4K", editionType: "Steelbook", languages: ["VF", "VOSTFR"], priority: "Haute", poster: null, tmdbId: null },
-  { id: "w2", title: "The Batman", originalTitle: "The Batman", year: 2022, editor: "Warner Bros", support: "Blu-ray 4K", editionType: "Steelbook", languages: ["VF", "VOSTFR"], priority: "Moyenne", poster: null, tmdbId: null },
-  { id: "w3", title: "Le Parrain", originalTitle: "The Godfather", year: 1972, editor: "Paramount", support: "Blu-ray 4K", editionType: "Collector", languages: ["VF", "VOSTFR"], priority: "Haute", poster: null, tmdbId: null },
+  { id: "w1", title: "Dune : Deuxième Partie", originalTitle: "Dune: Part Two", year: 2024, editor: "Warner Bros", support: "Blu-ray 4K", editionType: "Steelbook", languages: ["VF", "VOSTFR"], priority: "Haute", steelbookStatus: "Oui", poster: null, tmdbId: null },
+  { id: "w2", title: "The Batman", originalTitle: "The Batman", year: 2022, editor: "Warner Bros", support: "Blu-ray 4K", editionType: "Steelbook", languages: ["VF", "VOSTFR"], priority: "Moyenne", steelbookStatus: "Oui", poster: null, tmdbId: null },
+  { id: "w3", title: "Le Parrain", originalTitle: "The Godfather", year: 1972, editor: "Paramount", support: "Blu-ray 4K", editionType: "Collector", languages: ["VF", "VOSTFR"], priority: "Haute", steelbookStatus: "En cours", poster: null, tmdbId: null },
 ];
 
 const seedAlerts = [
@@ -28,6 +28,13 @@ const SUPPORTS = ["Tous", "DVD", "Blu-ray", "Blu-ray 4K"];
 const EDITIONS = ["Tous", "Classique", "Collector", "Steelbook"];
 const LANGUAGES = ["VF", "VOSTFR", "VO", "Anglais", "Autre"];
 const GENRES = ["Tous", "Action", "Science-fiction", "Horreur", "Drame", "Animation", "Aventure", "Fantastique"];
+const PRIORITIES = ["Toutes", "Haute", "Moyenne", "Basse"];
+const STEELBOOK_STATUS = ["En cours", "Oui", "Non"];
+const ALERT_KINDS = [
+  { value: "Toutes", label: "Toutes" },
+  { value: "sortie", label: "Sorties" },
+  { value: "solde", label: "Bons plans" },
+];
 
 // ---------- App state ----------
 const state = {
@@ -35,11 +42,20 @@ const state = {
   collection: [],
   wishlist: [],
   alerts: [],
+  dismissedIds: new Set(),
+
   query: "",
   supportFilter: "Tous",
   editionFilter: "Tous",
   genreFilter: "Tous",
   showFilters: false,
+
+  wishQuery: "",
+  priorityFilter: "Toutes",
+  showWishFilters: false,
+
+  alertQuery: "",
+  alertKindFilter: "Toutes",
 };
 
 const uid = () => Math.random().toString(36).slice(2, 10);
@@ -55,15 +71,12 @@ async function init() {
 
   state.collection = await DB.seedIfEmpty("collection", seedCollection);
   state.wishlist = await DB.seedIfEmpty("wishlist", seedWishlist);
+  state.dismissedIds = new Set((await DB.getAll("dismissed")).map((d) => d.id));
 
   const cachedAlerts = await DB.getAll("alerts");
-  if (cachedAlerts.length > 0) {
-    state.alerts = cachedAlerts;
-    state.alertsSource = "cached";
-  } else {
-    state.alerts = seedAlerts;
-    state.alertsSource = "demo";
-  }
+  const base = cachedAlerts.length > 0 ? cachedAlerts : seedAlerts;
+  state.alerts = base.filter((a) => !state.dismissedIds.has(a.id));
+  state.alertsSource = cachedAlerts.length > 0 ? "cached" : "demo";
 
   document.querySelectorAll(".tab-btn").forEach((btn) => {
     btn.addEventListener("click", () => { state.tab = btn.dataset.tab; render(); });
@@ -73,7 +86,7 @@ async function init() {
   document.getElementById("content").addEventListener("input", onContentInput);
 
   render();
-  refreshAlertsFeed(); // tentative silencieuse en arrière-plan au démarrage
+  refreshAlertsFeed();
 }
 
 async function refreshAlertsFeed() {
@@ -85,10 +98,10 @@ async function refreshAlertsFeed() {
     const data = await res.json();
     const alerts = Array.isArray(data.alerts) ? data.alerts : [];
     if (alerts.length === 0) return;
-    state.alerts = alerts;
+    await DB.replaceAll("alerts", alerts);
+    state.alerts = alerts.filter((a) => !state.dismissedIds.has(a.id));
     state.alertsSource = "live";
     state.alertsUpdatedAt = data.updatedAt || null;
-    await DB.replaceAll("alerts", alerts);
     if (state.tab === "alerts") render();
   } catch (err) {
     console.warn("Flux d'alertes indisponible :", err.message);
@@ -122,6 +135,7 @@ function render() {
   document.getElementById("fab-add").classList.toggle("hidden", state.tab === "alerts");
   const badge = document.getElementById("alerts-badge");
   if (state.alerts.length) { badge.textContent = state.alerts.length; badge.classList.add("show"); }
+  else badge.classList.remove("show");
 
   const content = document.getElementById("content");
   if (state.tab === "collection") content.innerHTML = renderCollection();
@@ -163,6 +177,12 @@ function badgeEdition(editionType) {
   if (!editionType || editionType === "Classique") return "";
   const cls = editionType === "Steelbook" ? "steelbook" : "collector";
   return `<span class="badge-edition ${cls}">${esc(editionType)}</span>`;
+}
+
+function badgeStatus(status) {
+  if (!status) return "";
+  const cls = status === "Oui" ? "yes" : status === "En cours" ? "pending" : "no";
+  return `<span class="badge-status ${cls}">${status === "Oui" ? "✓ Steelbook" : status === "En cours" ? "⏳ En cours" : "Pas de steelbook"}</span>`;
 }
 
 function chipsHTML(name, options, current) {
@@ -228,19 +248,45 @@ function renderCollection() {
 }
 
 // ---------- Wishlist tab ----------
+function filteredWishlist() {
+  return state.wishlist.filter((it) => {
+    const q = it.title.toLowerCase().includes(state.wishQuery.toLowerCase());
+    const p = state.priorityFilter === "Toutes" || it.priority === state.priorityFilter;
+    return q && p;
+  });
+}
+
 function renderWishlist() {
-  const items = state.wishlist;
+  const items = filteredWishlist();
   return `
     <div style="display:flex;align-items:baseline;justify-content:space-between;">
       <h1 class="page-title display">Liste d'envie</h1>
       <button class="text-link-btn" id="import-letterboxd">Importer Letterboxd</button>
     </div>
-    <p class="page-sub">Les films que vous voulez ajouter un jour — recherchez n'importe quel titre via TMDb.</p>
+    <p class="page-sub">Recherchez n'importe quel titre via TMDb, ou importez votre watchlist.</p>
+
+    <div class="search-row">
+      <div class="search-box">
+        <svg class="icon" viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input id="wish-search-input" placeholder="Rechercher un film…" value="${esc(state.wishQuery)}" />
+      </div>
+      <button class="icon-btn ${state.showWishFilters ? "on" : ""}" id="toggle-wish-filters">
+        <svg class="icon" viewBox="0 0 24 24" width="17" height="17"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+      </button>
+    </div>
+
+    ${state.showWishFilters ? `
+      <div class="filter-panel">
+        <div class="filter-group">
+          <div class="filter-label">Priorité</div>
+          <div class="chip-row">${chipsHTML("priority", PRIORITIES, state.priorityFilter)}</div>
+        </div>
+      </div>` : ""}
 
     ${items.length === 0 ? emptyState(
       `<path d="M12 21s-7-4.35-9.5-8.5C.5 8.5 3 5 6.5 5c2 0 3.5 1.2 5.5 3.5C14 6.2 15.5 5 17.5 5 21 5 23.5 8.5 21.5 12.5 19 16.65 12 21 12 21z"/>`,
-      "Liste vide",
-      "Ajoutez un film que vous rêvez de posséder."
+      "Rien à afficher",
+      "Ajustez vos filtres, ou ajoutez un film que vous rêvez de posséder."
     ) : items.map((it) => `
       <div class="row-card" data-open="wishlist" data-id="${it.id}">
         ${coverHTML(it, true)}
@@ -251,6 +297,7 @@ function renderWishlist() {
             ${badgeSupport(it.support)}${badgeEdition(it.editionType)}
             <span class="priority ${it.priority === "Haute" ? "high" : "low"}">★ ${esc(it.priority)}</span>
           </div>
+          <div style="margin-top:6px;">${badgeStatus(it.steelbookStatus)}</div>
         </div>
       </div>
     `).join("")}
@@ -258,6 +305,14 @@ function renderWishlist() {
 }
 
 // ---------- Alerts tab ----------
+function filteredAlerts() {
+  return state.alerts.filter((a) => {
+    const q = a.title.toLowerCase().includes(state.alertQuery.toLowerCase());
+    const k = state.alertKindFilter === "Toutes" || a.kind === state.alertKindFilter;
+    return q && k;
+  });
+}
+
 function renderAlerts() {
   const statusText = {
     demo: "Exemple — connectez le scraper pour de vraies alertes (voir README).",
@@ -267,6 +322,8 @@ function renderAlerts() {
       : "À jour.",
   }[state.alertsSource] || "";
 
+  const items = filteredAlerts();
+
   return `
     <div style="display:flex;align-items:baseline;justify-content:space-between;">
       <h1 class="page-title display">Alertes</h1>
@@ -274,14 +331,27 @@ function renderAlerts() {
         <svg class="icon" viewBox="0 0 24 24" width="16" height="16"><path d="M21 12a9 9 0 1 1-3-6.7M21 3v6h-6"/></svg>
       </button>
     </div>
-    <p class="page-sub" style="margin-bottom:4px;">Sorties à venir et baisses de prix, repérées pour vous.</p>
-    <p class="note-box">${esc(statusText)}</p>
+    <p class="note-box" style="margin-top:4px;">${esc(statusText)}</p>
 
-    ${state.alerts.length === 0 ? emptyState(
+    <div class="search-row">
+      <div class="search-box">
+        <svg class="icon" viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input id="alert-search-input" placeholder="Rechercher une alerte…" value="${esc(state.alertQuery)}" />
+      </div>
+    </div>
+    <div class="chip-row" style="margin:10px 0 6px;">
+      ${ALERT_KINDS.map((k) =>
+        `<button class="chip ${state.alertKindFilter === k.value ? "active" : ""}" data-chip="alertkind" data-value="${k.value}">${k.label}</button>`
+      ).join("")}
+    </div>
+
+    ${items.length === 0 ? emptyState(
       `<path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/>`,
-      "Aucune alerte pour l'instant",
-      "Revenez plus tard, ou vérifiez que le scraper a bien tourné au moins une fois."
-    ) : state.alerts.map((a) => `
+      "Rien à afficher",
+      state.alerts.length === 0
+        ? "Revenez plus tard, ou vérifiez que le scraper a bien tourné au moins une fois."
+        : "Aucune alerte ne correspond à votre recherche."
+    ) : items.map((a) => `
       <div class="alert-card">
         <div class="alert-icon ${a.kind}">
           ${a.kind === "solde"
@@ -296,9 +366,19 @@ function renderAlerts() {
             ${a.link ? `<a href="${esc(a.link)}" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">Voir →</a>` : ""}
           </div>
         </div>
+        <button class="dismiss-btn" data-dismiss="${a.id}" title="Marquer comme vu">
+          <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
       </div>
     `).join("")}
   `;
+}
+
+async function dismissAlert(id) {
+  state.dismissedIds.add(id);
+  state.alerts = state.alerts.filter((a) => a.id !== id);
+  await DB.put("dismissed", { id });
+  render();
 }
 
 function emptyState(iconPath, title, text) {
@@ -314,13 +394,18 @@ function emptyState(iconPath, title, text) {
 function onContentClick(e) {
   const chip = e.target.closest("[data-chip]");
   if (chip) {
-    if (chip.dataset.chip === "support") state.supportFilter = chip.dataset.value;
-    else if (chip.dataset.chip === "edition") state.editionFilter = chip.dataset.value;
-    else state.genreFilter = chip.dataset.value;
+    const map = { support: "supportFilter", edition: "editionFilter", genre: "genreFilter", priority: "priorityFilter", alertkind: "alertKindFilter" };
+    state[map[chip.dataset.chip]] = chip.dataset.value;
     render();
     return;
   }
+
   if (e.target.closest("#toggle-filters")) { state.showFilters = !state.showFilters; render(); return; }
+  if (e.target.closest("#toggle-wish-filters")) { state.showWishFilters = !state.showWishFilters; render(); return; }
+  if (e.target.closest("#import-letterboxd")) { openLetterboxdImportModal(); return; }
+
+  const dismissBtn = e.target.closest("[data-dismiss]");
+  if (dismissBtn) { dismissAlert(dismissBtn.dataset.dismiss); return; }
 
   const refreshBtn = e.target.closest("#refresh-alerts");
   if (refreshBtn) {
@@ -332,8 +417,6 @@ function onContentClick(e) {
     return;
   }
 
-  if (e.target.closest("#import-letterboxd")) { openLetterboxdImportModal(); return; }
-
   const card = e.target.closest("[data-open]");
   if (card) {
     const kind = card.dataset.open;
@@ -344,11 +427,13 @@ function onContentClick(e) {
 }
 
 function onContentInput(e) {
-  if (e.target.id === "search-input") {
+  if (e.target.id === "search-input" || e.target.id === "wish-search-input" || e.target.id === "alert-search-input") {
     const caret = e.target.selectionStart;
-    state.query = e.target.value;
+    if (e.target.id === "search-input") state.query = e.target.value;
+    else if (e.target.id === "wish-search-input") state.wishQuery = e.target.value;
+    else state.alertQuery = e.target.value;
     render();
-    const input = document.getElementById("search-input");
+    const input = document.getElementById(e.target.id);
     input.focus();
     input.setSelectionRange(caret, caret);
   }
@@ -442,42 +527,55 @@ function getCheckedLanguages(prefix) {
   return Array.from(document.querySelectorAll(`input[name="${prefix}-lang"]:checked`)).map((el) => el.value);
 }
 
-function openAddCollectionModal() {
-  let picked = { poster: null, tmdbId: null, originalTitle: "" };
+function selectOptionsHTML(options, current) {
+  return options.map((o) => `<option ${o === current ? "selected" : ""}>${o}</option>`).join("");
+}
 
-  modalShell("Nouveau titre", `
+// ---- Add / Edit collection ----
+function openAddCollectionModal(existing = null) {
+  const isEdit = Boolean(existing);
+  let picked = {
+    poster: existing?.poster || null,
+    tmdbId: existing?.tmdbId || null,
+    originalTitle: existing?.originalTitle || "",
+  };
+  const personalPhotoInitial = existing?.photo || null;
+  const previewImg = personalPhotoInitial || picked.poster;
+
+  modalShell(isEdit ? "Modifier le titre" : "Nouveau titre", `
     ${tmdbSearchBlockHTML()}
 
-    <button class="photo-picker" id="photo-picker">
-      <svg viewBox="0 0 24 24"><path d="M4 8h3l2-2h6l2 2h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
-      <span>Ou ajoutez votre propre photo</span>
+    <button class="photo-picker" id="photo-picker" ${personalPhotoInitial ? 'data-photo="' + esc(personalPhotoInitial) + '"' : ""}>
+      ${previewImg ? `<img src="${previewImg}" alt="" />` : `
+        <svg viewBox="0 0 24 24"><path d="M4 8h3l2-2h6l2 2h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+        <span>Ou ajoutez votre propre photo</span>`}
     </button>
     <input type="file" id="photo-input" accept="image/*" style="display:none" />
 
-    <div class="field"><div class="field-label">Titre du film</div><input id="f-title" placeholder="ex. Dune" /></div>
+    <div class="field"><div class="field-label">Titre du film</div><input id="f-title" placeholder="ex. Dune" value="${esc(existing?.title || "")}" /></div>
     <div class="field-row">
-      <div class="field"><div class="field-label">Année</div><input id="f-year" placeholder="2021" /></div>
-      <div class="field"><div class="field-label">Prix (€)</div><input id="f-price" placeholder="29.99" /></div>
+      <div class="field"><div class="field-label">Année</div><input id="f-year" placeholder="2021" value="${existing?.year ?? ""}" /></div>
+      <div class="field"><div class="field-label">Prix (€)</div><input id="f-price" placeholder="29.99" value="${existing?.price || ""}" /></div>
     </div>
-    <div class="field"><div class="field-label">Éditeur / distributeur</div><input id="f-editor" placeholder="ex. Warner Bros" /></div>
+    <div class="field"><div class="field-label">Éditeur / distributeur</div><input id="f-editor" placeholder="ex. Warner Bros" value="${esc(existing?.editor || "")}" /></div>
     <div class="field-row">
       <div class="field"><div class="field-label">Support</div>
-        <select id="f-support">${SUPPORTS.filter((s) => s !== "Tous").map((s) => `<option>${s}</option>`).join("")}</select>
+        <select id="f-support">${selectOptionsHTML(SUPPORTS.filter((s) => s !== "Tous"), existing?.support)}</select>
       </div>
       <div class="field"><div class="field-label">Type de boîtier</div>
-        <select id="f-edition">${EDITIONS.filter((e) => e !== "Tous").map((e) => `<option>${e}</option>`).join("")}</select>
+        <select id="f-edition">${selectOptionsHTML(EDITIONS.filter((e) => e !== "Tous"), existing?.editionType)}</select>
       </div>
     </div>
     <div class="field"><div class="field-label">Genre</div>
-      <select id="f-genre">${GENRES.filter((g) => g !== "Tous").map((g) => `<option>${g}</option>`).join("")}</select>
+      <select id="f-genre">${selectOptionsHTML(GENRES.filter((g) => g !== "Tous"), existing?.genre)}</select>
     </div>
     <div class="field">
       <div class="field-label">Langues disponibles</div>
-      <div class="lang-row">${languageCheckboxesHTML("add", ["VF", "VOSTFR"])}</div>
+      <div class="lang-row">${languageCheckboxesHTML("add", existing?.languages || ["VF", "VOSTFR"])}</div>
     </div>
-    <div class="field"><div class="field-label">Note (optionnel)</div><input id="f-note" placeholder="ex. Édition exclusive Fnac" /></div>
+    <div class="field"><div class="field-label">Note (optionnel)</div><input id="f-note" placeholder="ex. Édition exclusive Fnac" value="${esc(existing?.note || "")}" /></div>
 
-    <div class="btn-row"><button class="btn-primary" id="save-collection">Ajouter à ma collection</button></div>
+    <div class="btn-row"><button class="btn-primary" id="save-collection">${isEdit ? "Enregistrer les modifications" : "Ajouter à ma collection"}</button></div>
   `);
 
   wireTmdbSearch(async (movie) => {
@@ -488,6 +586,7 @@ function openAddCollectionModal() {
     if (movie.posterPath) {
       picked.poster = await window.TMDb.fetchPoster(movie.posterPath);
       document.getElementById("photo-picker").innerHTML = `<img src="${picked.poster}" alt="" />`;
+      document.getElementById("photo-picker").removeAttribute("data-photo");
     }
     document.getElementById("tmdb-results").innerHTML = "";
     document.getElementById("tmdb-query").value = movie.title;
@@ -499,7 +598,6 @@ function openAddCollectionModal() {
     if (!file) return;
     const reader = new FileReader();
     reader.onload = () => {
-      picked.poster = null; // une photo perso remplace l'affiche TMDb
       document.getElementById("photo-picker").innerHTML = `<img src="${reader.result}" alt="" />`;
       document.getElementById("photo-picker").dataset.photo = reader.result;
     };
@@ -511,7 +609,7 @@ function openAddCollectionModal() {
     if (!title) return;
     const personalPhoto = document.getElementById("photo-picker").dataset.photo || null;
     const item = {
-      id: uid(),
+      id: existing?.id || uid(),
       title,
       originalTitle: picked.originalTitle || title,
       year: Number(document.getElementById("f-year").value) || null,
@@ -521,13 +619,18 @@ function openAddCollectionModal() {
       languages: getCheckedLanguages("add"),
       genre: document.getElementById("f-genre").value,
       price: Number(document.getElementById("f-price").value) || 0,
-      date: new Date().toISOString().slice(0, 10),
+      date: existing?.date || new Date().toISOString().slice(0, 10),
       photo: personalPhoto,
       poster: personalPhoto ? null : picked.poster,
       tmdbId: picked.tmdbId,
       note: document.getElementById("f-note").value.trim(),
     };
-    state.collection.unshift(item);
+    if (isEdit) {
+      const idx = state.collection.findIndex((x) => x.id === existing.id);
+      if (idx >= 0) state.collection[idx] = item;
+    } else {
+      state.collection.unshift(item);
+    }
     await DB.put("collection", item);
     showSaved();
     closeModal();
@@ -535,33 +638,44 @@ function openAddCollectionModal() {
   });
 }
 
-function openAddWishlistModal() {
-  let picked = { poster: null, tmdbId: null, originalTitle: "" };
+// ---- Add / Edit wishlist ----
+function openAddWishlistModal(existing = null) {
+  const isEdit = Boolean(existing);
+  let picked = {
+    poster: existing?.poster || null,
+    tmdbId: existing?.tmdbId || null,
+    originalTitle: existing?.originalTitle || "",
+  };
 
-  modalShell("Ajouter une envie", `
+  modalShell(isEdit ? "Modifier l'envie" : "Ajouter une envie", `
     ${tmdbSearchBlockHTML()}
 
-    <div class="field"><div class="field-label">Titre du film</div><input id="w-title" placeholder="ex. The Batman" /></div>
+    <div class="field"><div class="field-label">Titre du film</div><input id="w-title" placeholder="ex. The Batman" value="${esc(existing?.title || "")}" /></div>
     <div class="field-row">
-      <div class="field"><div class="field-label">Année</div><input id="w-year" placeholder="2022" /></div>
-      <div class="field"><div class="field-label">Éditeur</div><input id="w-editor" placeholder="Warner Bros" /></div>
+      <div class="field"><div class="field-label">Année</div><input id="w-year" placeholder="2022" value="${existing?.year ?? ""}" /></div>
+      <div class="field"><div class="field-label">Éditeur</div><input id="w-editor" placeholder="Warner Bros" value="${esc(existing?.editor || "")}" /></div>
     </div>
     <div class="field-row">
       <div class="field"><div class="field-label">Support souhaité</div>
-        <select id="w-support">${SUPPORTS.filter((s) => s !== "Tous").map((s) => `<option>${s}</option>`).join("")}</select>
+        <select id="w-support">${selectOptionsHTML(SUPPORTS.filter((s) => s !== "Tous"), existing?.support)}</select>
       </div>
       <div class="field"><div class="field-label">Type de boîtier</div>
-        <select id="w-edition">${EDITIONS.filter((e) => e !== "Tous").map((e) => `<option>${e}</option>`).join("")}</select>
+        <select id="w-edition">${selectOptionsHTML(EDITIONS.filter((e) => e !== "Tous"), existing?.editionType)}</select>
       </div>
     </div>
     <div class="field">
       <div class="field-label">Langues souhaitées</div>
-      <div class="lang-row">${languageCheckboxesHTML("wish", ["VF", "VOSTFR"])}</div>
+      <div class="lang-row">${languageCheckboxesHTML("wish", existing?.languages || ["VF", "VOSTFR"])}</div>
     </div>
-    <div class="field"><div class="field-label">Priorité</div>
-      <select id="w-priority"><option>Haute</option><option>Moyenne</option><option>Basse</option></select>
+    <div class="field-row">
+      <div class="field"><div class="field-label">Priorité</div>
+        <select id="w-priority">${selectOptionsHTML(["Haute", "Moyenne", "Basse"], existing?.priority)}</select>
+      </div>
+      <div class="field"><div class="field-label">Steelbook sorti ?</div>
+        <select id="w-status">${selectOptionsHTML(STEELBOOK_STATUS, existing?.steelbookStatus)}</select>
+      </div>
     </div>
-    <div class="btn-row"><button class="btn-primary" id="save-wishlist">Ajouter à ma liste</button></div>
+    <div class="btn-row"><button class="btn-primary" id="save-wishlist">${isEdit ? "Enregistrer les modifications" : "Ajouter à ma liste"}</button></div>
   `);
 
   wireTmdbSearch(async (movie) => {
@@ -578,7 +692,7 @@ function openAddWishlistModal() {
     const title = document.getElementById("w-title").value.trim();
     if (!title) return;
     const item = {
-      id: uid(),
+      id: existing?.id || uid(),
       title,
       originalTitle: picked.originalTitle || title,
       year: Number(document.getElementById("w-year").value) || null,
@@ -587,10 +701,16 @@ function openAddWishlistModal() {
       editionType: document.getElementById("w-edition").value,
       languages: getCheckedLanguages("wish"),
       priority: document.getElementById("w-priority").value,
+      steelbookStatus: document.getElementById("w-status").value,
       poster: picked.poster,
       tmdbId: picked.tmdbId,
     };
-    state.wishlist.unshift(item);
+    if (isEdit) {
+      const idx = state.wishlist.findIndex((x) => x.id === existing.id);
+      if (idx >= 0) state.wishlist[idx] = item;
+    } else {
+      state.wishlist.unshift(item);
+    }
     await DB.put("wishlist", item);
     showSaved();
     closeModal();
@@ -606,6 +726,7 @@ function openDetailModal(item, kind) {
        <div class="detail-row"><span class="label">Langues</span><span class="value">${esc(langs)}</span></div>
        ${item.note ? `<div class="detail-row"><span class="label">Note</span><span class="value">${esc(item.note)}</span></div>` : ""}`
     : `<div class="detail-row"><span class="label">Priorité</span><span class="value">${esc(item.priority)}</span></div>
+       <div class="detail-row"><span class="label">Steelbook sorti ?</span><span class="value">${esc(item.steelbookStatus || "—")}</span></div>
        <div class="detail-row"><span class="label">Langues souhaitées</span><span class="value">${esc(langs)}</span></div>`;
 
   modalShell(item.title, `
@@ -616,13 +737,22 @@ function openDetailModal(item, kind) {
     </div>
     ${extra}
     <div class="btn-row">
-      ${kind === "wishlist" ? `<button class="btn-primary" id="move-btn">
-          <svg viewBox="0 0 24 24"><path d="M7 7h10M7 7l4-4M7 7l4 4M17 17H7M17 17l-4 4M17 17l-4-4"/></svg>
-          Déplacer vers ma collection
-        </button>` : "<div style='flex:1'></div>"}
+      <button class="btn-primary" id="edit-btn">
+        <svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+        Modifier
+      </button>
+      ${kind === "wishlist" ? `<button class="icon-btn" id="move-btn" title="Déplacer vers ma collection">
+          <svg class="icon" viewBox="0 0 24 24" width="17" height="17"><path d="M7 7h10M7 7l4-4M7 7l4 4M17 17H7M17 17l-4 4M17 17l-4-4"/></svg>
+        </button>` : ""}
       <button class="btn-danger" id="delete-btn"><svg viewBox="0 0 24 24"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg></button>
     </div>
   `);
+
+  document.getElementById("edit-btn").addEventListener("click", () => {
+    closeModal();
+    if (kind === "collection") openAddCollectionModal(item);
+    else openAddWishlistModal(item);
+  });
 
   if (kind === "wishlist") {
     document.getElementById("move-btn").addEventListener("click", async () => {
@@ -657,9 +787,6 @@ function openDetailModal(item, kind) {
 }
 
 // ---------- Import Letterboxd (CSV) ----------
-// Letterboxd n'a pas d'API auto-délivrée (accès sur demande uniquement),
-// mais propose un export CSV de vos listes : Paramètres → Import & Export
-// → Export Data. On lit ce fichier directement, aucune clé nécessaire.
 function parseCSV(text) {
   const rows = [];
   let row = [], field = "", inQuotes = false;
@@ -688,8 +815,7 @@ function openLetterboxdImportModal() {
   modalShell("Importer depuis Letterboxd", `
     <p style="font-size:12.5px;color:var(--text-dim);line-height:1.5;margin-bottom:14px;">
       Sur Letterboxd : Paramètres → Import &amp; Export → "Export Data". Vous obtenez un .zip
-      contenant plusieurs .csv (watchlist.csv, diary.csv…). Choisissez-en un ci-dessous — les
-      films seront ajoutés à votre liste d'envie, avec affiche récupérée sur TMDb si configuré.
+      contenant plusieurs .csv (watchlist.csv, diary.csv…). Choisissez-en un ci-dessous.
     </p>
     <input type="file" id="csv-input" accept=".csv" style="display:none" />
     <button class="photo-picker" id="csv-picker" style="height:80px;">
@@ -741,7 +867,7 @@ function openLetterboxdImportModal() {
       const item = {
         id: uid(), title, originalTitle: title, year, editor: "",
         support: "Blu-ray 4K", editionType: "Classique", languages: ["VF", "VOSTFR"],
-        priority: "Moyenne", poster, tmdbId,
+        priority: "Moyenne", steelbookStatus: "En cours", poster, tmdbId,
       };
       state.wishlist.unshift(item);
       await DB.put("wishlist", item);
