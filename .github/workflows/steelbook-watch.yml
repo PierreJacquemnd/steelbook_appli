@@ -1,0 +1,39 @@
+name: Surveillance steelbook
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # toutes les 6 heures
+  workflow_dispatch:          # + bouton "Run workflow" manuel dans GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Installer les dépendances
+        working-directory: ./scraper
+        run: npm install
+
+      - name: Lancer le scraper
+        working-directory: ./scraper
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: npm run check
+
+      # Le scraper écrit scraper/state/*.json (déjà vus) et public-data/alerts.json
+      # (les alertes que l'appli affiche). On commit les deux.
+      - name: Sauvegarder l'état et publier les alertes
+        run: |
+          git config user.name "steelvault-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add scraper/state/*.json public-data/alerts.json || true
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: update alerts feed [skip ci]"
+          git push
