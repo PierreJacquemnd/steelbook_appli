@@ -1,32 +1,50 @@
 {
-  "updatedAt": "2026-11-23T23:28:02.844Z",
+  "updatedAt": "2026-11-24T08:43:32.119Z",
   "alerts": [
     {
-      "id": "a_aHR0cHM6Ly93d3cu",
-      "kind": "solde",
-      "title": "M3gan 2.0 Blu Ray 4K Steelbook",
-      "source": "dealabs.com",
+      "id": "a_aHR0cHM6Ly9zdGVl",
+      "kind": "sortie",
+      "title": "Heart Of The Beast : un steelbook 4K en France",
+      "source": "steelbookpro.fr",
       "date": "2026-11-23",
-      "link": "https://www.dealabs.com/bons-plans/m3gan-20-blu-ray-4k-steelbook-3465836",
-      "detail": "18,90€ - E.LeclercTrès bon prix !"
+      "link": "https://steelbookpro.fr/2026/11/23/heart-of-the-beast-steelbook-4k/",
+      "detail": "&#160; &#8212;  23 novembre 2026 &#8212; Le film d&#8217;aventure avec Brad Pitt « Heart Of The Beast » sortira en steelbook 4K [&#8230;]"
+    },
+    {
+      "id": "a_aHR0cHM6Ly9zdGVl",
+      "kind": "sortie",
+      "title": "Avatar Les Sept Refuges : un steelbook [US]",
+      "source": "steelbookpro.fr",
+      "date": "2026-11-23",
+      "link": "https://steelbookpro.fr/2026/11/23/avatar-les-sept-refuges-steelbook/",
+      "detail": "&#160; &#8212;  23 novembre 2026 &#8212; La série « Avatar : Les Sept Refuges » (Saison 1) (Seven Havens en VO) aura droit [&#8230;]"
+    },
+    {
+      "id": "a_aHR0cHM6Ly80ay11",
+      "kind": "sortie",
+      "title": "L'Exorciste III la suite 4k Steelbook annonce",
+      "source": "4k-ultra-hd.fr",
+      "date": "2026-11-23",
+      "link": "https://4k-ultra-hd.fr/film/lexorciste-la-suite-4k-steelbook",
+      "detail": "Nouvelle fiche détectée"
+    },
+    {
+      "id": "a_aHR0cHM6Ly80ay11",
+      "kind": "sortie",
+      "title": "Heart Of The Beast 4K Steelbook",
+      "source": "4k-ultra-hd.fr",
+      "date": "2026-11-23",
+      "link": "https://4k-ultra-hd.fr/film/heart-of-the-beast-4k-steelbook",
+      "detail": "Nouvelle fiche détectée"
     },
     {
       "id": "a_aHR0cHM6Ly93d3cu",
       "kind": "solde",
-      "title": "[Blu-Ray 4K UHD] Back to Black - Boîtier SteelBook Edition limité",
+      "title": "Blu-Ray 4K Ultra HD - Wonka - Édition Collector Spéciale Fnac SteelBook",
       "source": "dealabs.com",
       "date": "2026-11-23",
-      "link": "https://www.dealabs.com/bons-plans/back-to-black-4k-ultra-hd-blu-ray-boitier-steelbook-limite-3465852",
-      "detail": "11,97€ - AmazonPrix très correct pour ce biopic, perso j’ai bien aimé. Je ne connaissais pas trop son histoire. Pas mal!À propos de ce produitRetour au noir 4k"
-    },
-    {
-      "id": "a_aHR0cHM6Ly93d3cu",
-      "kind": "solde",
-      "title": "[Blu-Ray 4K UHD] Thelma & Louise",
-      "source": "dealabs.com",
-      "date": "2026-11-23",
-      "link": "https://www.dealabs.com/bons-plans/thelma-louise-4k-ultra-hd-blu-ray-bonus-3466147",
-      "detail": "20,99€ - AmazonThelma et Louise (Thelma &amp; Louise) est un film américain réalisé par Ridley Scott, sorti en 1991.Le film est présenté « hors compétition » au"
+      "link": "https://www.dealabs.com/bons-plans/wonka-edition-collector-speciale-fnac-steelbook-blu-ray-4k-ultra-hd-3467146",
+      "detail": "13,99€ - FnacDécouvrez la jeunesse de Willy Wonka, l’extraordinaire inventeur, magicien et chocolatier de l’univers féérique de Charlie et la chocolaterie de Ro"
     },
     {
       "id": "a_aHR0cHM6Ly93d3cu",
@@ -40,74 +58,29 @@
     {
       "id": "a_aHR0cHM6Ly93d3cu",
       "kind": "solde",
-      "title": "Blu-Ray 4K Ultra HD - Wonka - Édition Collector Spéciale Fnac SteelBook",
+      "title": "[Blu-Ray 4K UHD] Thelma & Louise",
       "source": "dealabs.com",
       "date": "2026-11-23",
-      "link": "https://www.dealabs.com/bons-plans/wonka-edition-collector-speciale-fnac-steelbook-blu-ray-4k-ultra-hd-3467146",
-      "detail": "13,99€ - FnacDécouvrez la jeunesse de Willy Wonka, l’extraordinaire inventeur, magicien et chocolatier de l’univers féérique de Charlie et la chocolaterie de Ro"
-    },
-    {
-      "id": "a_aHR0cHM6Ly80ay11",
-      "kind": "sortie",
-      "title": "Heart Of The Beast 4K Steelbook",
-      "source": "4k-ultra-hd.fr",
-      "date": "2026-11-23",
-      "link": "https://4k-ultra-hd.fr/film/heart-of-the-beast-4k-steelbook",
-      "detail": "Nouvelle fiche détectée"
-    },
-    {
-      "id": "a_aHR0cHM6Ly80ay11",
-      "kind": "sortie",
-      "title": "L'Exorciste III la suite 4k Steelbook annonce",
-      "source": "4k-ultra-hd.fr",
-      "date": "2026-11-23",
-      "link": "https://4k-ultra-hd.fr/film/lexorciste-la-suite-4k-steelbook",
-      "detail": "Nouvelle fiche détectée"
-    },
-    {
-      "id": "a_aHR0cHM6Ly9zdGVl",
-      "kind": "sortie",
-      "title": "Avatar Les Sept Refuges : un steelbook [US]",
-      "source": "steelbookpro.fr",
-      "date": "2026-11-23",
-      "link": "https://steelbookpro.fr/2026/11/23/avatar-les-sept-refuges-steelbook/",
-      "detail": "&#160; &#8212;  23 novembre 2026 &#8212; La série « Avatar : Les Sept Refuges » (Saison 1) (Seven Havens en VO) aura droit [&#8230;]"
-    },
-    {
-      "id": "a_aHR0cHM6Ly9zdGVl",
-      "kind": "sortie",
-      "title": "Heart Of The Beast : un steelbook 4K en France",
-      "source": "steelbookpro.fr",
-      "date": "2026-11-23",
-      "link": "https://steelbookpro.fr/2026/11/23/heart-of-the-beast-steelbook-4k/",
-      "detail": "&#160; &#8212;  23 novembre 2026 &#8212; Le film d&#8217;aventure avec Brad Pitt « Heart Of The Beast » sortira en steelbook 4K [&#8230;]"
+      "link": "https://www.dealabs.com/bons-plans/thelma-louise-4k-ultra-hd-blu-ray-bonus-3466147",
+      "detail": "20,99€ - AmazonThelma et Louise (Thelma &amp; Louise) est un film américain réalisé par Ridley Scott, sorti en 1991.Le film est présenté « hors compétition » au"
     },
     {
       "id": "a_aHR0cHM6Ly93d3cu",
       "kind": "solde",
-      "title": "Blu-ray 4K UHD : Fallout - Saison 2 - Édition SteelBook limitée",
+      "title": "[Blu-Ray 4K UHD] Back to Black - Boîtier SteelBook Edition limité",
       "source": "dealabs.com",
-      "date": "2026-11-22",
-      "link": "https://www.dealabs.com/bons-plans/fallout-saison-2-4k-ultra-hd-edition-steelbook-limitee-3464862",
-      "detail": "29,57€ - AmazonEt dire que j'ai payé mon Steelbook plein pot en précommande ..Super prix en tout cas.Contenu :- Les 8 épisodes de la série en Blu-ray 4K- Un boi"
-    },
-    {
-      "id": "a_aHR0cHM6Ly9zdGVl",
-      "kind": "sortie",
-      "title": "Wicked Partie II : deux steelbooks 4K en France [MAJ: 12 / 15 euros]",
-      "source": "steelbookpro.fr",
-      "date": "2026-11-22",
-      "link": "https://steelbookpro.fr/2025/11/19/wicked-partie-ii-steelbook-4k/",
-      "detail": "&#160; &#8212; MAJ le 22 novembre 2026 &#8212; Le steelbook se retrouve à 12,47 € sur amazon et à 14,99 € [&#8230;]"
+      "date": "2026-11-23",
+      "link": "https://www.dealabs.com/bons-plans/back-to-black-4k-ultra-hd-blu-ray-boitier-steelbook-limite-3465852",
+      "detail": "11,97€ - AmazonPrix très correct pour ce biopic, perso j’ai bien aimé. Je ne connaissais pas trop son histoire. Pas mal!À propos de ce produitRetour au noir 4k"
     },
     {
       "id": "a_aHR0cHM6Ly93d3cu",
       "kind": "solde",
-      "title": "[Blu-Ray 4K UHD] F1 Le Film - Edition Limitée Steelbook",
+      "title": "M3gan 2.0 Blu Ray 4K Steelbook",
       "source": "dealabs.com",
-      "date": "2026-11-22",
-      "link": "https://www.dealabs.com/bons-plans/f1-le-film-edition-limitee-exclusivite-fnac-steelbook-blu-ray-4k-ultra-hd-3465347",
-      "detail": "19,99€ - FnacSteelbook de retour Bientôt en stock à partir du 02/12/2026 en version vf Dolby Digital 5.1Sonny Hayes était le prodige de la F1 des années 90 jusq"
+      "date": "2026-11-23",
+      "link": "https://www.dealabs.com/bons-plans/m3gan-20-blu-ray-4k-steelbook-3465836",
+      "detail": "18,90€ - E.LeclercTrès bon prix !"
     },
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
@@ -121,20 +94,29 @@
     {
       "id": "a_aHR0cHM6Ly93d3cu",
       "kind": "solde",
-      "title": "Sélection de Blu-Ray 4K en promotion à 11.47€ et 11.97€ - Ex: Les Dents de la Mer",
+      "title": "[Blu-Ray 4K UHD] F1 Le Film - Edition Limitée Steelbook",
       "source": "dealabs.com",
-      "date": "2026-11-20",
-      "link": "https://www.dealabs.com/bons-plans/selection-de-blu-ray-4k-en-promotion-a-1147eur-et-1197eur-3463398",
-      "detail": "11,97€ - AmazonSelection de blu-ray 4k en promo ▶️ à 11,07€ :Le convoiLe journal de bridget jones (steelbook)Notre-dame brûle ▶️ à 11,17€ :Blade Runner 2049 ▶️"
+      "date": "2026-11-22",
+      "link": "https://www.dealabs.com/bons-plans/f1-le-film-edition-limitee-exclusivite-fnac-steelbook-blu-ray-4k-ultra-hd-3465347",
+      "detail": "19,99€ - FnacSteelbook de retour Bientôt en stock à partir du 02/12/2026 en version vf Dolby Digital 5.1Sonny Hayes était le prodige de la F1 des années 90 jusq"
+    },
+    {
+      "id": "a_aHR0cHM6Ly9zdGVl",
+      "kind": "sortie",
+      "title": "Wicked Partie II : deux steelbooks 4K en France [MAJ: 12 / 15 euros]",
+      "source": "steelbookpro.fr",
+      "date": "2026-11-22",
+      "link": "https://steelbookpro.fr/2025/11/19/wicked-partie-ii-steelbook-4k/",
+      "detail": "&#160; &#8212; MAJ le 22 novembre 2026 &#8212; Le steelbook se retrouve à 12,47 € sur amazon et à 14,99 € [&#8230;]"
     },
     {
       "id": "a_aHR0cHM6Ly93d3cu",
       "kind": "solde",
-      "title": "Coffret Blu-Ray 4K Ultra HD Reservoir Dogs Édition Prestige Limitée SteelBook (Sélection de magasins)",
+      "title": "Blu-ray 4K UHD : Fallout - Saison 2 - Édition SteelBook limitée",
       "source": "dealabs.com",
-      "date": "2026-11-20",
-      "link": "https://www.dealabs.com/bons-plans/coffret-reservoir-dogs-edition-prestige-limitee-steelbook-blu-ray-4k-ultra-hd-3463130",
-      "detail": "16,99€ - FnacSix truands désignés par des noms de code entreprennent de dévaliser une bijouterie sous la direction de Joe Cabot et de son fils Nice Guy Eddie. L"
+      "date": "2026-11-22",
+      "link": "https://www.dealabs.com/bons-plans/fallout-saison-2-4k-ultra-hd-edition-steelbook-limitee-3464862",
+      "detail": "29,57€ - AmazonEt dire que j'ai payé mon Steelbook plein pot en précommande ..Super prix en tout cas.Contenu :- Les 8 épisodes de la série en Blu-ray 4K- Un boi"
     },
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
@@ -146,22 +128,31 @@
       "detail": "&#160; &#8212;  20 novembre 2026 &#8212; Le nouveau film « Hunger Games » intitulé  » Lever de soleil sur la moisson » (Sunrise [&#8230;]"
     },
     {
-      "id": "a_aHR0cHM6Ly9zdGVl",
-      "kind": "sortie",
-      "title": "Vacances Romaines (1953) : un steelbook 4K Blufans",
-      "source": "steelbookpro.fr",
-      "date": "2026-11-19",
-      "link": "https://steelbookpro.fr/2026/11/19/vacances-romaines-1953-un-steelbook-4k-blufans/",
-      "detail": "&#160; &#8212;  19 novembre 2026 &#8212; Le film « Vacances Romaines » (Roman Holiday en VO) aura droit à un steelbook 4K [&#8230;]"
+      "id": "a_aHR0cHM6Ly93d3cu",
+      "kind": "solde",
+      "title": "Coffret Blu-Ray 4K Ultra HD Reservoir Dogs Édition Prestige Limitée SteelBook (Sélection de magasins)",
+      "source": "dealabs.com",
+      "date": "2026-11-20",
+      "link": "https://www.dealabs.com/bons-plans/coffret-reservoir-dogs-edition-prestige-limitee-steelbook-blu-ray-4k-ultra-hd-3463130",
+      "detail": "16,99€ - FnacSix truands désignés par des noms de code entreprennent de dévaliser une bijouterie sous la direction de Joe Cabot et de son fils Nice Guy Eddie. L"
     },
     {
       "id": "a_aHR0cHM6Ly93d3cu",
       "kind": "solde",
-      "title": "Blu-Ray 4K Ultra HD Les Griffes de la Nuit Édition Collector - avec Boîtier SteelBook & Goodies",
+      "title": "Sélection de Blu-Ray 4K en promotion à 11.47€ et 11.97€ - Ex: Les Dents de la Mer",
+      "source": "dealabs.com",
+      "date": "2026-11-20",
+      "link": "https://www.dealabs.com/bons-plans/selection-de-blu-ray-4k-en-promotion-a-1147eur-et-1197eur-3463398",
+      "detail": "11,97€ - AmazonSelection de blu-ray 4k en promo ▶️ à 11,07€ :Le convoiLe journal de bridget jones (steelbook)Notre-dame brûle ▶️ à 11,17€ :Blade Runner 2049 ▶️"
+    },
+    {
+      "id": "a_aHR0cHM6Ly93d3cu",
+      "kind": "solde",
+      "title": "Blu-Ray & 4K Ultra HD Wicked Partie II - Boîtier SteelBook Limité",
       "source": "dealabs.com",
       "date": "2026-11-19",
-      "link": "https://www.dealabs.com/bons-plans/steelbook-les-griffes-de-la-nuit-1984-sb-4k-3461454",
-      "detail": "33,24€ - AmazonContient- un boîtier métal SteelBook exclusif contenant : le 4K Ultra HD du film (HDR10) // le Blu-ray du film (VF Dolby Digital 5.1 / VOST DTS-H"
+      "link": "https://www.dealabs.com/bons-plans/wicked-partie-ii-4k-ultra-hd-blu-ray-boitier-steelbook-limite-3461101",
+      "detail": "12,47€ - AmazonTrès bon prix !Deal jusqu'au 30/11 !À propos de ce produitWicked : Partie II [4K Ultra HD + Blu-ray - Boîtier SteelBook limité]Commentaires clien"
     },
     {
       "id": "a_aHR0cHM6Ly93d3cu",
@@ -175,11 +166,20 @@
     {
       "id": "a_aHR0cHM6Ly93d3cu",
       "kind": "solde",
-      "title": "Blu-Ray & 4K Ultra HD Wicked Partie II - Boîtier SteelBook Limité",
+      "title": "Blu-Ray 4K Ultra HD Les Griffes de la Nuit Édition Collector - avec Boîtier SteelBook & Goodies",
       "source": "dealabs.com",
       "date": "2026-11-19",
-      "link": "https://www.dealabs.com/bons-plans/wicked-partie-ii-4k-ultra-hd-blu-ray-boitier-steelbook-limite-3461101",
-      "detail": "12,47€ - AmazonTrès bon prix !Deal jusqu'au 30/11 !À propos de ce produitWicked : Partie II [4K Ultra HD + Blu-ray - Boîtier SteelBook limité]Commentaires clien"
+      "link": "https://www.dealabs.com/bons-plans/steelbook-les-griffes-de-la-nuit-1984-sb-4k-3461454",
+      "detail": "33,24€ - AmazonContient- un boîtier métal SteelBook exclusif contenant : le 4K Ultra HD du film (HDR10) // le Blu-ray du film (VF Dolby Digital 5.1 / VOST DTS-H"
+    },
+    {
+      "id": "a_aHR0cHM6Ly9zdGVl",
+      "kind": "sortie",
+      "title": "Vacances Romaines (1953) : un steelbook 4K Blufans",
+      "source": "steelbookpro.fr",
+      "date": "2026-11-19",
+      "link": "https://steelbookpro.fr/2026/11/19/vacances-romaines-1953-un-steelbook-4k-blufans/",
+      "detail": "&#160; &#8212;  19 novembre 2026 &#8212; Le film « Vacances Romaines » (Roman Holiday en VO) aura droit à un steelbook 4K [&#8230;]"
     },
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
@@ -191,15 +191,6 @@
       "detail": "&#160; &#8212; MAJ le 18 novembre 2027 &#8212; Le steelbook 4K de « La La Land » (déjà sorti en Amérique chez BestBuy) [&#8230;]"
     },
     {
-      "id": "a_aHR0cHM6Ly9zdGVl",
-      "kind": "sortie",
-      "title": "Wildwood la prophétie de la forêt : un steelbook 4K [US]",
-      "source": "steelbookpro.fr",
-      "date": "2026-11-17",
-      "link": "https://steelbookpro.fr/2026/11/16/wildwood-steelbook-4k-us/",
-      "detail": "&#160; &#8212;  16 novembre 2026 &#8212; Le nouveau film du studio Laïka « Wildwood : la prophétie de la forêt » sortira [&#8230;]"
-    },
-    {
       "id": "a_aHR0cHM6Ly80ay11",
       "kind": "sortie",
       "title": "Hunger Games Lever de soleil sur la moisson 4K Steelbook annonce",
@@ -209,13 +200,13 @@
       "detail": "Nouvelle fiche détectée"
     },
     {
-      "id": "a_aHR0cHM6Ly93d3cu",
-      "kind": "solde",
-      "title": "Blu-Ray 4K Ultra HD Les Enfants Loups Ame & Yuki - Boîtier SteelBook Limité",
-      "source": "dealabs.com",
-      "date": "2026-11-16",
-      "link": "https://www.dealabs.com/bons-plans/blu-ray-4k-ultra-hd-les-enfants-loups-ame-et-yuki-boitier-steelbook-limite-blu-ray-inclus-3456866",
-      "detail": "27,52€ - AmazonBoîtier métal Steelbook limitéContient :- le 4K Ultra HD du film- le Blu-ray du filmContient 2 disques, à savoir le film en Blu-ray 4K Ultra HD ("
+      "id": "a_aHR0cHM6Ly9zdGVl",
+      "kind": "sortie",
+      "title": "Wildwood la prophétie de la forêt : un steelbook 4K [US]",
+      "source": "steelbookpro.fr",
+      "date": "2026-11-17",
+      "link": "https://steelbookpro.fr/2026/11/16/wildwood-steelbook-4k-us/",
+      "detail": "&#160; &#8212;  16 novembre 2026 &#8212; Le nouveau film du studio Laïka « Wildwood : la prophétie de la forêt » sortira [&#8230;]"
     },
     {
       "id": "a_aHR0cHM6Ly93d3cu",
@@ -229,20 +220,20 @@
     {
       "id": "a_aHR0cHM6Ly93d3cu",
       "kind": "solde",
+      "title": "Blu-Ray 4K Ultra HD Les Enfants Loups Ame & Yuki - Boîtier SteelBook Limité",
+      "source": "dealabs.com",
+      "date": "2026-11-16",
+      "link": "https://www.dealabs.com/bons-plans/blu-ray-4k-ultra-hd-les-enfants-loups-ame-et-yuki-boitier-steelbook-limite-blu-ray-inclus-3456866",
+      "detail": "27,52€ - AmazonBoîtier métal Steelbook limitéContient :- le 4K Ultra HD du film- le Blu-ray du filmContient 2 disques, à savoir le film en Blu-ray 4K Ultra HD ("
+    },
+    {
+      "id": "a_aHR0cHM6Ly93d3cu",
+      "kind": "solde",
       "title": "Blu-ray 4K Ultra HD Black Adam - Édition Steelbook Spéciale (Via retrait magasin)",
       "source": "dealabs.com",
       "date": "2026-11-15",
       "link": "https://www.dealabs.com/bons-plans/blu-ray-4k-ultra-hd-black-adam-edition-steelbook-speciale-via-retrait-magasin-3456159",
       "detail": "9,99€ - E.LeclercTrès bon prix repéré chez E.Leclerc sur l'édition collector boîtier métal Steelbook spéciale E.Leclerc du film DC Comics Black Adam (avec Dwayn"
-    },
-    {
-      "id": "a_aHR0cHM6Ly93d3cu",
-      "kind": "solde",
-      "title": "Blu-ray 4K UHD : Evil Dead Burn - Édition Collector SteelBook limitée (4K UHD + Blu-ray)",
-      "source": "dealabs.com",
-      "date": "2026-11-14",
-      "link": "https://www.dealabs.com/bons-plans/blu-ray-4k-ultra-hd-evil-dead-burn-edition-collector-steelbook-limitee-4k-uhd-blu-ray-3455689",
-      "detail": "29,99€ - Amazonlimitée SteelBook® 4K Ultra HD + Blu-ray du film d'horreur Evil Dead Burn réalisé par Sébastien Vaniček, actuellement classée numéro 1 des meille"
     },
     {
       "id": "a_aHR0cHM6Ly93d3cu",
@@ -256,11 +247,11 @@
     {
       "id": "a_aHR0cHM6Ly93d3cu",
       "kind": "solde",
-      "title": "Blu-ray 4K Ultra HD + Blu-ray Digipack Collector District 9",
+      "title": "Blu-ray 4K UHD : Evil Dead Burn - Édition Collector SteelBook limitée (4K UHD + Blu-ray)",
       "source": "dealabs.com",
-      "date": "2026-11-13",
-      "link": "https://www.dealabs.com/bons-plans/digipack-collector-district-9-4k-ultra-hd-blu-ray-3450790",
-      "detail": "22,12€ - AmazonPromo sur Amazon du digipack collector 4k District 9 en édition limitée sortie en septembre dernier et déjà une promo sympa, c'est prit pour moi"
+      "date": "2026-11-14",
+      "link": "https://www.dealabs.com/bons-plans/blu-ray-4k-ultra-hd-evil-dead-burn-edition-collector-steelbook-limitee-4k-uhd-blu-ray-3455689",
+      "detail": "29,99€ - Amazonlimitée SteelBook® 4K Ultra HD + Blu-ray du film d'horreur Evil Dead Burn réalisé par Sébastien Vaniček, actuellement classée numéro 1 des meille"
     },
     {
       "id": "a_aHR0cHM6Ly93d3cu",
@@ -274,38 +265,20 @@
     {
       "id": "a_aHR0cHM6Ly93d3cu",
       "kind": "solde",
-      "title": "Blu-ray 4K UHD : Marty Supreme - Édition Collector Limitée Boîtier Métal SteelBook",
+      "title": "Blu-ray 4K Ultra HD + Blu-ray Digipack Collector District 9",
       "source": "dealabs.com",
-      "date": "2026-11-12",
-      "link": "https://www.dealabs.com/bons-plans/blu-ray-4k-ultra-hd-marty-supreme-edition-collector-limitee-boitier-metal-steelbook-3453575",
-      "detail": "16,99€ - FnacTrès belle baisse de prix repérée chez Fnac.com (opération « Blu-ray 4K à petits prix ») sur l'édition collector boîtier métallique SteelBook du fi"
-    },
-    {
-      "id": "a_aHR0cHM6Ly93d3cu",
-      "kind": "solde",
-      "title": "Blu-ray 4K Orca + Blu-ray - Boîtier SteelBook",
-      "source": "dealabs.com",
-      "date": "2026-11-12",
-      "link": "https://www.dealabs.com/bons-plans/orca-4k-ultra-hd-blu-ray-boitier-steelbook-3452979",
-      "detail": "14,99€ - AmazonDescription du produitBoîtier métal SteelBook® limitéContient :- le 4K Ultra HD du film (HDR10)- le Blu-ray du filmSynopsisRachel Bedford, biolog"
+      "date": "2026-11-13",
+      "link": "https://www.dealabs.com/bons-plans/digipack-collector-district-9-4k-ultra-hd-blu-ray-3450790",
+      "detail": "22,12€ - AmazonPromo sur Amazon du digipack collector 4k District 9 en édition limitée sortie en septembre dernier et déjà une promo sympa, c'est prit pour moi"
     },
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
       "kind": "sortie",
-      "title": "King Kong (1933) : un steelbook 4K [UK]",
+      "title": "Star Trek Strange New Worlds Saison 4 : un steelbook 4K [US]",
       "source": "steelbookpro.fr",
       "date": "2026-11-12",
-      "link": "https://steelbookpro.fr/2026/11/11/king-kong-1933-steelbook-4k/",
-      "detail": "&#160; &#8212;  11 novembre 2026 &#8212; Le classique « King Kong » de 1933 aura droit à un steelbook 4K. Il est [&#8230;]"
-    },
-    {
-      "id": "a_aHR0cHM6Ly9zdGVl",
-      "kind": "sortie",
-      "title": "Wildwood la prophétie de la forêt : un steelbook 4K [UK]",
-      "source": "steelbookpro.fr",
-      "date": "2026-11-12",
-      "link": "https://steelbookpro.fr/2026/11/11/wildwood-la-prophetie-de-la-foret-steelbook-4k/",
-      "detail": "&#160; &#8212;  11 novembre 2026 &#8212; Le nouveau film du studio Laïka « Wildwood : la prophétie de la forêt » sortira [&#8230;]"
+      "link": "https://steelbookpro.fr/2026/11/12/star-trek-strange-new-worlds-saison-4-steelbook/",
+      "detail": "&#160; &#8212;  12 novembre 2026 &#8212; La saison 4 de « Star Trek Strange New Worlds » arrive en steelbook 4K en [&#8230;]"
     },
     {
       "id": "a_aHR0cHM6Ly93d3cu",
@@ -319,20 +292,38 @@
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
       "kind": "sortie",
-      "title": "Star Trek Strange New Worlds Saison 4 : un steelbook 4K [US]",
+      "title": "Wildwood la prophétie de la forêt : un steelbook 4K [UK]",
       "source": "steelbookpro.fr",
       "date": "2026-11-12",
-      "link": "https://steelbookpro.fr/2026/11/12/star-trek-strange-new-worlds-saison-4-steelbook/",
-      "detail": "&#160; &#8212;  12 novembre 2026 &#8212; La saison 4 de « Star Trek Strange New Worlds » arrive en steelbook 4K en [&#8230;]"
+      "link": "https://steelbookpro.fr/2026/11/11/wildwood-la-prophetie-de-la-foret-steelbook-4k/",
+      "detail": "&#160; &#8212;  11 novembre 2026 &#8212; Le nouveau film du studio Laïka « Wildwood : la prophétie de la forêt » sortira [&#8230;]"
     },
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
       "kind": "sortie",
-      "title": "Le Contrat : un steelbook 4K [US]",
+      "title": "King Kong (1933) : un steelbook 4K [UK]",
       "source": "steelbookpro.fr",
-      "date": "2026-11-11",
-      "link": "https://steelbookpro.fr/2026/11/11/le-contrat-steelbook-4k-us/",
-      "detail": "&#160; &#8212;  11 novembre 2026 &#8212; Le film avec Arnold Schwarzenegger « Le Contrat  » (Raw Deal en VO) aura droit [&#8230;]"
+      "date": "2026-11-12",
+      "link": "https://steelbookpro.fr/2026/11/11/king-kong-1933-steelbook-4k/",
+      "detail": "&#160; &#8212;  11 novembre 2026 &#8212; Le classique « King Kong » de 1933 aura droit à un steelbook 4K. Il est [&#8230;]"
+    },
+    {
+      "id": "a_aHR0cHM6Ly93d3cu",
+      "kind": "solde",
+      "title": "Blu-ray 4K Orca + Blu-ray - Boîtier SteelBook",
+      "source": "dealabs.com",
+      "date": "2026-11-12",
+      "link": "https://www.dealabs.com/bons-plans/orca-4k-ultra-hd-blu-ray-boitier-steelbook-3452979",
+      "detail": "14,99€ - AmazonDescription du produitBoîtier métal SteelBook® limitéContient :- le 4K Ultra HD du film (HDR10)- le Blu-ray du filmSynopsisRachel Bedford, biolog"
+    },
+    {
+      "id": "a_aHR0cHM6Ly93d3cu",
+      "kind": "solde",
+      "title": "Blu-ray 4K UHD : Marty Supreme - Édition Collector Limitée Boîtier Métal SteelBook",
+      "source": "dealabs.com",
+      "date": "2026-11-12",
+      "link": "https://www.dealabs.com/bons-plans/blu-ray-4k-ultra-hd-marty-supreme-edition-collector-limitee-boitier-metal-steelbook-3453575",
+      "detail": "16,99€ - FnacTrès belle baisse de prix repérée chez Fnac.com (opération « Blu-ray 4K à petits prix ») sur l'édition collector boîtier métallique SteelBook du fi"
     },
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
@@ -344,31 +335,13 @@
       "detail": "&#160; &#8212;  11 novembre 2026 &#8212; Le film de Guillermo Del Toro « Le Labyrinthe de Pan  » (Pan&#8217;s Labyrinth en [&#8230;]"
     },
     {
-      "id": "a_aHR0cHM6Ly93d3cu",
-      "kind": "solde",
-      "title": "[Précommande] Blu-ray 4K Princesse Mononoké - Édition Boîtier Métal Steelbook",
-      "source": "dealabs.com",
-      "date": "2026-11-10",
-      "link": "https://www.dealabs.com/bons-plans/precommande-blu-ray-4k-ultra-hd-princesse-mononoke-edition-boitier-metal-steelbook-3450308",
-      "detail": "29,99€ - CulturaOuverture des précommandes chez Cultura sur l'édition très attendue en Blu-ray 4K Ultra HD du chef-d'œuvre de Hayao Miyazaki et du Studio Ghibli"
-    },
-    {
-      "id": "a_aHR0cHM6Ly93d3cu",
-      "kind": "solde",
-      "title": "Sélection de Blu-ray et Blu-ray 4K en promotion. Ex : Ghost in The Shell en Steelbook 4K UHD + Blu-ray",
-      "source": "dealabs.com",
-      "date": "2026-11-10",
-      "link": "https://www.dealabs.com/bons-plans/selection-de-blu-ray-et-blu-ray-4k-chez-all-the-anime-black-friday-2026-3451414",
-      "detail": "37,49€ - Anime LimitedDes promos agressives chez l'éditeur All the Anime pour le Black Friday !Frais de port offert dès 44,99€ d'achat.Liste complète des Blu-ra"
-    },
-    {
-      "id": "a_aHR0cHM6Ly93d3cu",
-      "kind": "solde",
-      "title": "Blu-ray 4K Godzilla Minus One - Steelbook Combo (+Blu-ray)",
-      "source": "dealabs.com",
-      "date": "2026-11-10",
-      "link": "https://www.dealabs.com/bons-plans/godzilla-minus-one-steelbook-combo-4k-ultra-hdblu-ray-eur3999-3451452",
-      "detail": "20€ - Anime LimitedLauréat de l'Oscar® des \"Meilleurs Effets Visuels\" 2024, Godzilla Minus One est un spectacle visuel époustouflant dans la lignée des meilleur"
+      "id": "a_aHR0cHM6Ly9zdGVl",
+      "kind": "sortie",
+      "title": "Le Contrat : un steelbook 4K [US]",
+      "source": "steelbookpro.fr",
+      "date": "2026-11-11",
+      "link": "https://steelbookpro.fr/2026/11/11/le-contrat-steelbook-4k-us/",
+      "detail": "&#160; &#8212;  11 novembre 2026 &#8212; Le film avec Arnold Schwarzenegger « Le Contrat  » (Raw Deal en VO) aura droit [&#8230;]"
     },
     {
       "id": "a_aHR0cHM6Ly93d3cu",
@@ -382,6 +355,33 @@
     {
       "id": "a_aHR0cHM6Ly93d3cu",
       "kind": "solde",
+      "title": "Blu-ray 4K Godzilla Minus One - Steelbook Combo (+Blu-ray)",
+      "source": "dealabs.com",
+      "date": "2026-11-10",
+      "link": "https://www.dealabs.com/bons-plans/godzilla-minus-one-steelbook-combo-4k-ultra-hdblu-ray-eur3999-3451452",
+      "detail": "20€ - Anime LimitedLauréat de l'Oscar® des \"Meilleurs Effets Visuels\" 2024, Godzilla Minus One est un spectacle visuel époustouflant dans la lignée des meilleur"
+    },
+    {
+      "id": "a_aHR0cHM6Ly93d3cu",
+      "kind": "solde",
+      "title": "Sélection de Blu-ray et Blu-ray 4K en promotion. Ex : Ghost in The Shell en Steelbook 4K UHD + Blu-ray",
+      "source": "dealabs.com",
+      "date": "2026-11-10",
+      "link": "https://www.dealabs.com/bons-plans/selection-de-blu-ray-et-blu-ray-4k-chez-all-the-anime-black-friday-2026-3451414",
+      "detail": "37,49€ - Anime LimitedDes promos agressives chez l'éditeur All the Anime pour le Black Friday !Frais de port offert dès 44,99€ d'achat.Liste complète des Blu-ra"
+    },
+    {
+      "id": "a_aHR0cHM6Ly93d3cu",
+      "kind": "solde",
+      "title": "[Précommande] Blu-ray 4K Princesse Mononoké - Édition Boîtier Métal Steelbook",
+      "source": "dealabs.com",
+      "date": "2026-11-10",
+      "link": "https://www.dealabs.com/bons-plans/precommande-blu-ray-4k-ultra-hd-princesse-mononoke-edition-boitier-metal-steelbook-3450308",
+      "detail": "29,99€ - CulturaOuverture des précommandes chez Cultura sur l'édition très attendue en Blu-ray 4K Ultra HD du chef-d'œuvre de Hayao Miyazaki et du Studio Ghibli"
+    },
+    {
+      "id": "a_aHR0cHM6Ly93d3cu",
+      "kind": "solde",
       "title": "[Précommande] Blu-ray 4K Steelbook House of the Dragon - Saison 3",
       "source": "dealabs.com",
       "date": "2026-11-09",
@@ -389,31 +389,13 @@
       "detail": "49,99€ - E.LeclercEn précommande pour le 02 décembre. • Saison 3 de House of the Dragon• Édition SteelBook limitée• Disque Blu-ray Ultra HD 4K"
     },
     {
-      "id": "a_aHR0cHM6Ly9zdGVl",
-      "kind": "sortie",
-      "title": "Shin Godzilla : un steelbook 4K spécial fnac",
-      "source": "steelbookpro.fr",
-      "date": "2026-11-07",
-      "link": "https://steelbookpro.fr/2026/11/07/shin-godzilla-steelbook-4k-france/",
-      "detail": "&#160; &#8212;  07 novembre 2026 &#8212; Le film « Shin Godzilla » (Godzilla Resurgence) aura droit à un steelbook 4K en France [&#8230;]"
-    },
-    {
-      "id": "a_aHR0cHM6Ly80ay11",
-      "kind": "sortie",
-      "title": "Godzilla Resurgence 4K Steelbook annonce",
-      "source": "4k-ultra-hd.fr",
-      "date": "2026-11-07",
-      "link": "https://4k-ultra-hd.fr/film/godzilla-resurgence-4k-steelbook",
-      "detail": "Nouvelle fiche détectée"
-    },
-    {
       "id": "a_aHR0cHM6Ly93d3cu",
       "kind": "solde",
-      "title": "[Précommande] Blu-ray 4K UHD Shin Godzilla Steelbook - Godzilla Resurgence",
+      "title": "Coffret Blu-Ray 4K Twisters (4K Ultra HD + Blu-ray) - Boîtier SteelBook Limité",
       "source": "dealabs.com",
       "date": "2026-11-07",
-      "link": "https://www.dealabs.com/bons-plans/precommande-blu-ray-4k-uhd-shin-godzilla-steelbook-godzilla-resurgence-3448356",
-      "detail": "39,90€ - FnacVous avez manqué l'édition Spectrum sortie il y a 3 ans ? Deuxième chance avec cette réédition allégée de son blu-ray bonus !Sortie le 7 avril 2027"
+      "link": "https://www.dealabs.com/bons-plans/twisters-4k-ultra-hd-blu-ray-boitier-steelbook-limite-3448159",
+      "detail": "19,99€ - AmazonTwisters [4K Ultra HD + Blu-ray - Boîtier SteelBook limité]SpécificationsClassé: Tous publicsDimensions du colis: 17,1 x 13,7 x 1,4 cm; 160 gramm"
     },
     {
       "id": "a_aHR0cHM6Ly93d3cu",
@@ -427,29 +409,29 @@
     {
       "id": "a_aHR0cHM6Ly93d3cu",
       "kind": "solde",
-      "title": "Coffret Blu-Ray 4K Twisters (4K Ultra HD + Blu-ray) - Boîtier SteelBook Limité",
+      "title": "[Précommande] Blu-ray 4K UHD Shin Godzilla Steelbook - Godzilla Resurgence",
       "source": "dealabs.com",
       "date": "2026-11-07",
-      "link": "https://www.dealabs.com/bons-plans/twisters-4k-ultra-hd-blu-ray-boitier-steelbook-limite-3448159",
-      "detail": "19,99€ - AmazonTwisters [4K Ultra HD + Blu-ray - Boîtier SteelBook limité]SpécificationsClassé: Tous publicsDimensions du colis: 17,1 x 13,7 x 1,4 cm; 160 gramm"
+      "link": "https://www.dealabs.com/bons-plans/precommande-blu-ray-4k-uhd-shin-godzilla-steelbook-godzilla-resurgence-3448356",
+      "detail": "39,90€ - FnacVous avez manqué l'édition Spectrum sortie il y a 3 ans ? Deuxième chance avec cette réédition allégée de son blu-ray bonus !Sortie le 7 avril 2027"
+    },
+    {
+      "id": "a_aHR0cHM6Ly80ay11",
+      "kind": "sortie",
+      "title": "Godzilla Resurgence 4K Steelbook annonce",
+      "source": "4k-ultra-hd.fr",
+      "date": "2026-11-07",
+      "link": "https://4k-ultra-hd.fr/film/godzilla-resurgence-4k-steelbook",
+      "detail": "Nouvelle fiche détectée"
     },
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
       "kind": "sortie",
-      "title": "Leprechaun 1 &#038; 2 : un steelbook 4K en France",
+      "title": "Shin Godzilla : un steelbook 4K spécial fnac",
       "source": "steelbookpro.fr",
-      "date": "2026-11-06",
-      "link": "https://steelbookpro.fr/2026/11/06/leprechaun-1-2-steelbook-4k-france/",
-      "detail": "&#160; &#8212;  06 novembre 2026 &#8212; Les films « Leprechaun 1 &#38; 2 » auront droit à un steelbook 4K en France. [&#8230;]"
-    },
-    {
-      "id": "a_aHR0cHM6Ly93d3cu",
-      "kind": "solde",
-      "title": "Blu-Ray & 4K Ultra HD Le Flic de Beverly Hills - Boîtier Steelnook Limité",
-      "source": "dealabs.com",
-      "date": "2026-11-06",
-      "link": "https://www.dealabs.com/bons-plans/le-flic-de-beverly-hills-4k-ultra-hd-blu-ray-boitier-steelbook-limite-3440481",
-      "detail": "26,33€ - AmazonBaisse de prix à 24,6. Merci à @edouardsimon711 de nous l'avoir dit !Boîtier métal SteelBook® limitéContient :- le 4K Ultra HD du film (Dolby Vis"
+      "date": "2026-11-07",
+      "link": "https://steelbookpro.fr/2026/11/07/shin-godzilla-steelbook-4k-france/",
+      "detail": "&#160; &#8212;  07 novembre 2026 &#8212; Le film « Shin Godzilla » (Godzilla Resurgence) aura droit à un steelbook 4K en France [&#8230;]"
     },
     {
       "id": "a_aHR0cHM6Ly93d3cu",
@@ -463,11 +445,29 @@
     {
       "id": "a_aHR0cHM6Ly93d3cu",
       "kind": "solde",
-      "title": "Blu-Ray 4K Interstellar + Blu-Ray",
+      "title": "Blu-Ray & 4K Ultra HD Le Flic de Beverly Hills - Boîtier Steelnook Limité",
       "source": "dealabs.com",
+      "date": "2026-11-06",
+      "link": "https://www.dealabs.com/bons-plans/le-flic-de-beverly-hills-4k-ultra-hd-blu-ray-boitier-steelbook-limite-3440481",
+      "detail": "26,33€ - AmazonBaisse de prix à 24,6. Merci à @edouardsimon711 de nous l'avoir dit !Boîtier métal SteelBook® limitéContient :- le 4K Ultra HD du film (Dolby Vis"
+    },
+    {
+      "id": "a_aHR0cHM6Ly9zdGVl",
+      "kind": "sortie",
+      "title": "Leprechaun 1 &#038; 2 : un steelbook 4K en France",
+      "source": "steelbookpro.fr",
+      "date": "2026-11-06",
+      "link": "https://steelbookpro.fr/2026/11/06/leprechaun-1-2-steelbook-4k-france/",
+      "detail": "&#160; &#8212;  06 novembre 2026 &#8212; Les films « Leprechaun 1 &#38; 2 » auront droit à un steelbook 4K en France. [&#8230;]"
+    },
+    {
+      "id": "a_aHR0cHM6Ly9zdGVl",
+      "kind": "sortie",
+      "title": "Twister : un steelbook 4K en France [MAJ: nouvelle préco fnac]",
+      "source": "steelbookpro.fr",
       "date": "2026-11-05",
-      "link": "https://www.dealabs.com/bons-plans/blu-ray-4k-ultra-hd-interstellar-boitier-steelbook-edition-4k-uhd-blu-ray-eligible-offre-2-pour-2499eur-3447307",
-      "detail": "14,99€ - CulturaOffre très intéressante repérée chez Cultura sur l'édition boîtier métal Steelbook du chef-d'œuvre de Christopher Nolan, Interstellar, en combo"
+      "link": "https://steelbookpro.fr/2024/05/28/twister-steelbook-4k-collector-uk/",
+      "detail": "&#160; &#8212;  MAJ le 05 novembre 2026 &#8212;  Le steelbook 4K de Twister est de nouveau précommandable sur fnac.com pour le [&#8230;]"
     },
     {
       "id": "a_aHR0cHM6Ly80ay11",
@@ -479,13 +479,40 @@
       "detail": "Nouvelle fiche détectée"
     },
     {
+      "id": "a_aHR0cHM6Ly93d3cu",
+      "kind": "solde",
+      "title": "Blu-Ray 4K Interstellar + Blu-Ray",
+      "source": "dealabs.com",
+      "date": "2026-11-05",
+      "link": "https://www.dealabs.com/bons-plans/blu-ray-4k-ultra-hd-interstellar-boitier-steelbook-edition-4k-uhd-blu-ray-eligible-offre-2-pour-2499eur-3447307",
+      "detail": "14,99€ - CulturaOffre très intéressante repérée chez Cultura sur l'édition boîtier métal Steelbook du chef-d'œuvre de Christopher Nolan, Interstellar, en combo"
+    },
+    {
+      "id": "a_aHR0cHM6Ly80ay11",
+      "kind": "sortie",
+      "title": "King Kong 4K Steelbook",
+      "source": "4k-ultra-hd.fr",
+      "date": "2026-11-04",
+      "link": "https://4k-ultra-hd.fr/film/king-kong-steelbook",
+      "detail": "Nouvelle fiche détectée"
+    },
+    {
+      "id": "a_aHR0cHM6Ly80ay11",
+      "kind": "sortie",
+      "title": "Twister 4K Steelbook",
+      "source": "4k-ultra-hd.fr",
+      "date": "2026-11-04",
+      "link": "https://4k-ultra-hd.fr/film/twister",
+      "detail": "Nouvelle fiche détectée"
+    },
+    {
       "id": "a_aHR0cHM6Ly9zdGVl",
       "kind": "sortie",
-      "title": "Twister : un steelbook 4K en France [MAJ: nouvelle préco fnac]",
+      "title": "Lanterns Saison 1 : un steelbook en France",
       "source": "steelbookpro.fr",
-      "date": "2026-11-05",
-      "link": "https://steelbookpro.fr/2024/05/28/twister-steelbook-4k-collector-uk/",
-      "detail": "&#160; &#8212;  MAJ le 05 novembre 2026 &#8212;  Le steelbook 4K de Twister est de nouveau précommandable sur fnac.com pour le [&#8230;]"
+      "date": "2026-11-04",
+      "link": "https://steelbookpro.fr/2026/11/04/lanterns-saison-1-steelbook/",
+      "detail": "&#160; &#8212; 04 novembre 2026 &#8212;  La saison 1 de la série DC « Lanterns » aura droit à un steelbook en [&#8230;]"
     },
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
@@ -499,29 +526,11 @@
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
       "kind": "sortie",
-      "title": "Lanterns Saison 1 : un steelbook en France",
+      "title": "La Bataille de Gaulle : un steelbook 4K en France [MAJ: aperçu + rupture]",
       "source": "steelbookpro.fr",
-      "date": "2026-11-04",
-      "link": "https://steelbookpro.fr/2026/11/04/lanterns-saison-1-steelbook/",
-      "detail": "&#160; &#8212; 04 novembre 2026 &#8212;  La saison 1 de la série DC « Lanterns » aura droit à un steelbook en [&#8230;]"
-    },
-    {
-      "id": "a_aHR0cHM6Ly80ay11",
-      "kind": "sortie",
-      "title": "Twister 4K Steelbook",
-      "source": "4k-ultra-hd.fr",
-      "date": "2026-11-04",
-      "link": "https://4k-ultra-hd.fr/film/twister",
-      "detail": "Nouvelle fiche détectée"
-    },
-    {
-      "id": "a_aHR0cHM6Ly80ay11",
-      "kind": "sortie",
-      "title": "King Kong 4K Steelbook",
-      "source": "4k-ultra-hd.fr",
-      "date": "2026-11-04",
-      "link": "https://4k-ultra-hd.fr/film/king-kong-steelbook",
-      "detail": "Nouvelle fiche détectée"
+      "date": "2026-11-03",
+      "link": "https://steelbookpro.fr/2026/06/26/la-bataille-de-gaulle-steelbook-4k/",
+      "detail": "&#160; &#8212;  MAJ le 02 novembre 2026 &#8212; Voici un aperçu du steelbook de « La Bataille de Gaulle« . Il est [&#8230;]"
     },
     {
       "id": "a_aHR0cHM6Ly93d3cu",
@@ -531,15 +540,6 @@
       "date": "2026-11-03",
       "link": "https://www.dealabs.com/bons-plans/stealbook-la-bataille-de-gaulle-les-2-films-blu-ray-4k-3444845",
       "detail": "34,99€ - CulturaLa Bataille de Gaulle - Les 2 films : J'écris ton nom + L'Âge de fer - Blu-ray 4KEn version Steelbook limitée encore disponible chez Cultura."
-    },
-    {
-      "id": "a_aHR0cHM6Ly9zdGVl",
-      "kind": "sortie",
-      "title": "La Bataille de Gaulle : un steelbook 4K en France [MAJ: aperçu + rupture]",
-      "source": "steelbookpro.fr",
-      "date": "2026-11-03",
-      "link": "https://steelbookpro.fr/2026/06/26/la-bataille-de-gaulle-steelbook-4k/",
-      "detail": "&#160; &#8212;  MAJ le 02 novembre 2026 &#8212; Voici un aperçu du steelbook de « La Bataille de Gaulle« . Il est [&#8230;]"
     },
     {
       "id": "a_aHR0cHM6Ly93d3cu",
@@ -569,22 +569,13 @@
       "detail": "&#160; &#8212;  31 octobre 2026 &#8212; Le film d&#8217;horreur « Meurtres à la saint Valentin  » (My bloody Valentine en VO) [&#8230;]"
     },
     {
-      "id": "a_aHR0cHM6Ly9zdGVl",
-      "kind": "sortie",
-      "title": "Avengers 1 &#038; 2 : des steelbooks Blufans [MAJ: aperçu du 1]",
-      "source": "steelbookpro.fr",
-      "date": "2026-10-30",
-      "link": "https://steelbookpro.fr/2026/07/03/avengers-1-2-des-steelbooks-blufans/",
-      "detail": "&#160; &#8212; MAJ le 30 octobre 2026 &#8212; Voici un aperçu du premier Avengers. Il est glossy et embossé recto [&#8230;]"
-    },
-    {
       "id": "a_aHR0cHM6Ly93d3cu",
       "kind": "solde",
-      "title": "Blu-Ray 4K Ultra HD Hunger Games : La Ballade du Serpent & de l'Oiseau Chanteur Édition Collector Steelbook + goodies",
+      "title": "Blu-ray 4K Ultra HD Gladiator II Édition Limitée Spéciale Fnac SteelBook",
       "source": "dealabs.com",
       "date": "2026-10-30",
-      "link": "https://www.dealabs.com/bons-plans/hunger-games-la-ballade-du-serpent-et-de-loiseau-chanteur-edition-collector-steelbook-blu-ray-4k-ultra-hd-3442021",
-      "detail": "22€ - FnacPromo à la Fnac ou le coffret collector bénéficie d'une belle réduction de 28 euros Cette édition contient :Le film en Blu Ray 4KLe film en Blu-RaySte"
+      "link": "https://www.dealabs.com/bons-plans/gladiator-ii-edition-limitee-speciale-fnac-steelbook-blu-ray-4k-ultra-hd-3442269",
+      "detail": "14,99€ - FnacGladiator II Blu-ray 4K Ultra HD en Steelbook pour le même prix que la version amaray, c'est sympa."
     },
     {
       "id": "a_aHR0cHM6Ly93d3cu",
@@ -598,20 +589,29 @@
     {
       "id": "a_aHR0cHM6Ly93d3cu",
       "kind": "solde",
-      "title": "Blu-ray 4K Ultra HD Gladiator II Édition Limitée Spéciale Fnac SteelBook",
+      "title": "Blu-Ray 4K Ultra HD Hunger Games : La Ballade du Serpent & de l'Oiseau Chanteur Édition Collector Steelbook + goodies",
       "source": "dealabs.com",
       "date": "2026-10-30",
-      "link": "https://www.dealabs.com/bons-plans/gladiator-ii-edition-limitee-speciale-fnac-steelbook-blu-ray-4k-ultra-hd-3442269",
-      "detail": "14,99€ - FnacGladiator II Blu-ray 4K Ultra HD en Steelbook pour le même prix que la version amaray, c'est sympa."
+      "link": "https://www.dealabs.com/bons-plans/hunger-games-la-ballade-du-serpent-et-de-loiseau-chanteur-edition-collector-steelbook-blu-ray-4k-ultra-hd-3442021",
+      "detail": "22€ - FnacPromo à la Fnac ou le coffret collector bénéficie d'une belle réduction de 28 euros Cette édition contient :Le film en Blu Ray 4KLe film en Blu-RaySte"
     },
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
       "kind": "sortie",
-      "title": "Projet Dernière Chance : un steelbook 4K en France [MAJ: aperçu + rupture]",
+      "title": "Avengers 1 &#038; 2 : des steelbooks Blufans [MAJ: aperçu du 1]",
       "source": "steelbookpro.fr",
+      "date": "2026-10-30",
+      "link": "https://steelbookpro.fr/2026/07/03/avengers-1-2-des-steelbooks-blufans/",
+      "detail": "&#160; &#8212; MAJ le 30 octobre 2026 &#8212; Voici un aperçu du premier Avengers. Il est glossy et embossé recto [&#8230;]"
+    },
+    {
+      "id": "a_aHR0cHM6Ly93d3cu",
+      "kind": "solde",
+      "title": "[Précommande] Blu-Ray & 4K Ultra HD L'Odyssée - Steelbook Edition Limitée",
+      "source": "dealabs.com",
       "date": "2026-10-29",
-      "link": "https://steelbookpro.fr/2026/06/26/projet-derniere-chance-steelbook-4k-collector/",
-      "detail": "&#160; &#8212;  MAJ le 29 octobre 2026 &#8212; Voici un aperçu (édition UK) : il est de finition spot-gloss. Il [&#8230;]"
+      "link": "https://www.dealabs.com/bons-plans/precommande-steelbook-blu-ray-4k-lodyssee-3441123",
+      "detail": "29,99€ - E.LeclercDisponible en précommande chez Leclerc. Sortie le 18/11/2026.L'Odyssée est un péplum mythologique américano-britannique coécrit, coproduit et"
     },
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
@@ -623,13 +623,13 @@
       "detail": "&#160; &#8212;  29 octobre 2026 &#8212; Voici les futurs steelbooks exclusifs prévus chez Astro Creations (Angleterre) : Ghost : première [&#8230;]"
     },
     {
-      "id": "a_aHR0cHM6Ly93d3cu",
-      "kind": "solde",
-      "title": "[Précommande] Blu-Ray & 4K Ultra HD L'Odyssée - Steelbook Edition Limitée",
-      "source": "dealabs.com",
+      "id": "a_aHR0cHM6Ly9zdGVl",
+      "kind": "sortie",
+      "title": "Projet Dernière Chance : un steelbook 4K en France [MAJ: aperçu + rupture]",
+      "source": "steelbookpro.fr",
       "date": "2026-10-29",
-      "link": "https://www.dealabs.com/bons-plans/precommande-steelbook-blu-ray-4k-lodyssee-3441123",
-      "detail": "29,99€ - E.LeclercDisponible en précommande chez Leclerc. Sortie le 18/11/2026.L'Odyssée est un péplum mythologique américano-britannique coécrit, coproduit et"
+      "link": "https://steelbookpro.fr/2026/06/26/projet-derniere-chance-steelbook-4k-collector/",
+      "detail": "&#160; &#8212;  MAJ le 29 octobre 2026 &#8212; Voici un aperçu (édition UK) : il est de finition spot-gloss. Il [&#8230;]"
     },
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
@@ -650,13 +650,13 @@
       "detail": "&#160; &#8212;  27 octobre 2026 &#8212; Le film de Guy Ritchie « The Gentlemen » aura droit à un steelbook 4K en [&#8230;]"
     },
     {
-      "id": "a_aHR0cHM6Ly9zdGVl",
-      "kind": "sortie",
-      "title": "Fury : un steelbook 4K WeET",
-      "source": "steelbookpro.fr",
+      "id": "a_aHR0cHM6Ly93d3cu",
+      "kind": "solde",
+      "title": "[Précommande] Terminator Édition Limitée SteelBook Blu-ray 4K Ultra HD",
+      "source": "dealabs.com",
       "date": "2026-10-26",
-      "link": "https://steelbookpro.fr/2026/10/26/fury-steelbook-4k-weet/",
-      "detail": "&#160; &#8212;  26 octobre 2026 &#8212;  Le film de guerre avec Brad Pitt « Fury » aura droit à un steelbook 4K [&#8230;]"
+      "link": "https://www.dealabs.com/bons-plans/precommande-terminator-edition-limitee-steelbook-blu-ray-4k-ultra-hd-3439042",
+      "detail": "29,99€ - Fnac Encore un Steelbook pour le T-800 ! Après l'édition du 40e anniversaire sortie en novembre 2024 et la sortie d'une édition simple UHD en mai derni"
     },
     {
       "id": "a_aHR0cHM6Ly80ay11",
@@ -668,13 +668,13 @@
       "detail": "Nouvelle fiche détectée"
     },
     {
-      "id": "a_aHR0cHM6Ly93d3cu",
-      "kind": "solde",
-      "title": "[Précommande] Terminator Édition Limitée SteelBook Blu-ray 4K Ultra HD",
-      "source": "dealabs.com",
+      "id": "a_aHR0cHM6Ly9zdGVl",
+      "kind": "sortie",
+      "title": "Fury : un steelbook 4K WeET",
+      "source": "steelbookpro.fr",
       "date": "2026-10-26",
-      "link": "https://www.dealabs.com/bons-plans/precommande-terminator-edition-limitee-steelbook-blu-ray-4k-ultra-hd-3439042",
-      "detail": "29,99€ - Fnac Encore un Steelbook pour le T-800 ! Après l'édition du 40e anniversaire sortie en novembre 2024 et la sortie d'une édition simple UHD en mai derni"
+      "link": "https://steelbookpro.fr/2026/10/26/fury-steelbook-4k-weet/",
+      "detail": "&#160; &#8212;  26 octobre 2026 &#8212;  Le film de guerre avec Brad Pitt « Fury » aura droit à un steelbook 4K [&#8230;]"
     },
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
@@ -686,15 +686,6 @@
       "detail": "&#160; &#8212;  25 octobre 2026 &#8212; L&#8217;animé « Miss Kobayashi&#8217;s Dragon Maid » sortira en steelbooks en France. Editeur : CrunchyRoll Prix: [&#823"
     },
     {
-      "id": "a_aHR0cHM6Ly9zdGVl",
-      "kind": "sortie",
-      "title": "Sailor Moon : des steelbooks en France",
-      "source": "steelbookpro.fr",
-      "date": "2026-10-24",
-      "link": "https://steelbookpro.fr/2026/10/24/sailor-moon-steelbooks/",
-      "detail": "&#160; &#8212;  24 octobre 2026 &#8212; L&#8217;animé « Sailor Moon » aura droit à des steelbooks en France. Editeur : CrunchyRoll Prix: [&#8230;]"
-    },
-    {
       "id": "a_aHR0cHM6Ly93d3cu",
       "kind": "solde",
       "title": "The Flash SteelBook Blu-ray 4K Ultra HD",
@@ -704,22 +695,13 @@
       "detail": "10,99€ - FnacThe Flash SteelBook® Blu-ray 4K Ultra HD"
     },
     {
-      "id": "a_aHR0cHM6Ly93d3cu",
-      "kind": "solde",
-      "title": "Blu-ray 4K Eiffel - Edition Limitée SteelBook",
-      "source": "dealabs.com",
-      "date": "2026-10-23",
-      "link": "https://www.dealabs.com/bons-plans/eiffel-edition-limitee-steelbook-blu-ray-4k-ultra-hd-3437434",
-      "detail": "14,99€ - FnacEiffel Edition Limitée SteelBook® Blu-ray 4K Ultra HD Venant tout juste de terminer sa collaboration sur la Statue de la Liberté, Gustave Eiffel es"
-    },
-    {
-      "id": "a_aHR0cHM6Ly80ay11",
+      "id": "a_aHR0cHM6Ly9zdGVl",
       "kind": "sortie",
-      "title": "Le Monde de Narnia chapitre 2 4K Steelbook",
-      "source": "4k-ultra-hd.fr",
-      "date": "2026-10-23",
-      "link": "https://4k-ultra-hd.fr/film/le-monde-de-narnia-chapitre-2-4k-steelbook",
-      "detail": "Nouvelle fiche détectée"
+      "title": "Sailor Moon : des steelbooks en France",
+      "source": "steelbookpro.fr",
+      "date": "2026-10-24",
+      "link": "https://steelbookpro.fr/2026/10/24/sailor-moon-steelbooks/",
+      "detail": "&#160; &#8212;  24 octobre 2026 &#8212; L&#8217;animé « Sailor Moon » aura droit à des steelbooks en France. Editeur : CrunchyRoll Prix: [&#8230;]"
     },
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
@@ -733,10 +715,37 @@
     {
       "id": "a_aHR0cHM6Ly80ay11",
       "kind": "sortie",
-      "title": "Ginger Snaps 4K Steelbook annonce",
+      "title": "Le Monde de Narnia chapitre 2 4K Steelbook",
+      "source": "4k-ultra-hd.fr",
+      "date": "2026-10-23",
+      "link": "https://4k-ultra-hd.fr/film/le-monde-de-narnia-chapitre-2-4k-steelbook",
+      "detail": "Nouvelle fiche détectée"
+    },
+    {
+      "id": "a_aHR0cHM6Ly93d3cu",
+      "kind": "solde",
+      "title": "Blu-ray 4K Eiffel - Edition Limitée SteelBook",
+      "source": "dealabs.com",
+      "date": "2026-10-23",
+      "link": "https://www.dealabs.com/bons-plans/eiffel-edition-limitee-steelbook-blu-ray-4k-ultra-hd-3437434",
+      "detail": "14,99€ - FnacEiffel Edition Limitée SteelBook® Blu-ray 4K Ultra HD Venant tout juste de terminer sa collaboration sur la Statue de la Liberté, Gustave Eiffel es"
+    },
+    {
+      "id": "a_aHR0cHM6Ly9zdGVl",
+      "kind": "sortie",
+      "title": "Ginger Snaps : un steelbook 4K en France [MAJ: précos fnac]",
+      "source": "steelbookpro.fr",
+      "date": "2026-10-22",
+      "link": "https://steelbookpro.fr/2026/10/22/ginger-snaps-steelbook-4k/",
+      "detail": "&#160; &#8212; 22 octobre 2026 &#8212;  Le film d&#8217;horreur « Ginger Snaps » aura droit à un steelbook 4K en France. Il [&#8230;]"
+    },
+    {
+      "id": "a_aHR0cHM6Ly80ay11",
+      "kind": "sortie",
+      "title": "Street fighter 2026 4K Steelbook Vilains",
       "source": "4k-ultra-hd.fr",
       "date": "2026-10-22",
-      "link": "https://4k-ultra-hd.fr/film/ginger-snaps-4k-steelbook",
+      "link": "https://4k-ultra-hd.fr/film/street-fighter-2026-4k-steelbook-villains",
       "detail": "Nouvelle fiche détectée"
     },
     {
@@ -751,37 +760,10 @@
     {
       "id": "a_aHR0cHM6Ly80ay11",
       "kind": "sortie",
-      "title": "Street fighter 2026 4K Steelbook Vilains",
+      "title": "Ginger Snaps 4K Steelbook annonce",
       "source": "4k-ultra-hd.fr",
       "date": "2026-10-22",
-      "link": "https://4k-ultra-hd.fr/film/street-fighter-2026-4k-steelbook-villains",
-      "detail": "Nouvelle fiche détectée"
-    },
-    {
-      "id": "a_aHR0cHM6Ly9zdGVl",
-      "kind": "sortie",
-      "title": "Ginger Snaps : un steelbook 4K en France [MAJ: précos fnac]",
-      "source": "steelbookpro.fr",
-      "date": "2026-10-22",
-      "link": "https://steelbookpro.fr/2026/10/22/ginger-snaps-steelbook-4k/",
-      "detail": "&#160; &#8212; 22 octobre 2026 &#8212;  Le film d&#8217;horreur « Ginger Snaps » aura droit à un steelbook 4K en France. Il [&#8230;]"
-    },
-    {
-      "id": "a_aHR0cHM6Ly93d3cu",
-      "kind": "solde",
-      "title": "Blu-Ray 4k UHD Les Animaux Fantastiques: Les Secrets de Dumbledore - Edition Steelbook",
-      "source": "dealabs.com",
-      "date": "2026-10-21",
-      "link": "https://www.dealabs.com/bons-plans/les-animaux-fantastiques-3-les-secrets-de-dumbledore-steelbook-blu-ray-4k-ultra-hd-3435970",
-      "detail": "10,99€ - FnacPour les amateurs de l'univers Harry Potter et les collectionneurs de Steelbooks, le troisième volet des animaux fantastiques à petit prix. Synopsi"
-    },
-    {
-      "id": "a_aHR0cHM6Ly80ay11",
-      "kind": "sortie",
-      "title": "Clayface 4K Steelbook annonce",
-      "source": "4k-ultra-hd.fr",
-      "date": "2026-10-21",
-      "link": "https://4k-ultra-hd.fr/film/clayface-4k-steelbook",
+      "link": "https://4k-ultra-hd.fr/film/ginger-snaps-4k-steelbook",
       "detail": "Nouvelle fiche détectée"
     },
     {
@@ -794,31 +776,22 @@
       "detail": "&#160; &#8212;  21 octobre 2026 &#8212; Le film DC « Clayface » arrive en steelbook 4K en France. Précos amazon ouvertes pour le [&#8230;]"
     },
     {
-      "id": "a_aHR0cHM6Ly9zdGVl",
+      "id": "a_aHR0cHM6Ly80ay11",
       "kind": "sortie",
-      "title": "Les Ensorceleuses : un steelbook 4K en France [MAJ: aperçu + rupture sauf chez Plaion]",
-      "source": "steelbookpro.fr",
-      "date": "2026-10-20",
-      "link": "https://steelbookpro.fr/2026/06/13/les-ensorceleuses-steelbook-4k/",
-      "detail": "&#160; &#8212; MAJ le 20 octobre 2026 &#8212;  Voici un aperçu : il est de finition spot-gloss + embossée (titre [&#8230;]"
+      "title": "Clayface 4K Steelbook annonce",
+      "source": "4k-ultra-hd.fr",
+      "date": "2026-10-21",
+      "link": "https://4k-ultra-hd.fr/film/clayface-4k-steelbook",
+      "detail": "Nouvelle fiche détectée"
     },
     {
-      "id": "a_aHR0cHM6Ly9zdGVl",
-      "kind": "sortie",
-      "title": "Obi-Wan Kenobi &#8211; Andor &#8211; MoonKnight &#8211; Falcon et le Soldat de l&#8217;hiver : des steelbooks 4K [MAJ: Obi et Andor de retour]",
-      "source": "steelbookpro.fr",
-      "date": "2026-10-20",
-      "link": "https://steelbookpro.fr/2024/03/05/obi-wan-kenobi-andor-moonknight-falcon-et-le-soldat-de-lhiver-steelbook-4k/",
-      "detail": "&#160; &#8212; MAJ le 20 octobre 2026 &#8212; Les steelbooks 4K d&#8217;Andor et Obi-Wan Kenobi sont de nouveau disponibles sur [&#8230;]"
-    },
-    {
-      "id": "a_aHR0cHM6Ly9zdGVl",
-      "kind": "sortie",
-      "title": "Messe Noire &#8211; Foudu au Noir &#8211; Sanglante Paranoïa &#8211; L&#8217;Invasion des piranhas &#8211; La Compagnie des Loups : des steelcases en France",
-      "source": "steelbookpro.fr",
-      "date": "2026-10-20",
-      "link": "https://steelbookpro.fr/2026/10/20/messe-noire-foudu-au-noir-sanglante-paranoia-linvasion-des-piranhas-la-compagnie-des-loups-des-steelcases-en-france/",
-      "detail": "&#160; &#8212; 20 octobre 2026 &#8212; Voici cinq nouveaux steelcases à venir en France pour Halloween. Ils sont limités à [&#8230;]"
+      "id": "a_aHR0cHM6Ly93d3cu",
+      "kind": "solde",
+      "title": "Blu-Ray 4k UHD Les Animaux Fantastiques: Les Secrets de Dumbledore - Edition Steelbook",
+      "source": "dealabs.com",
+      "date": "2026-10-21",
+      "link": "https://www.dealabs.com/bons-plans/les-animaux-fantastiques-3-les-secrets-de-dumbledore-steelbook-blu-ray-4k-ultra-hd-3435970",
+      "detail": "10,99€ - FnacPour les amateurs de l'univers Harry Potter et les collectionneurs de Steelbooks, le troisième volet des animaux fantastiques à petit prix. Synopsi"
     },
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
@@ -832,11 +805,29 @@
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
       "kind": "sortie",
-      "title": "Chucky &#8211; MaXXXine &#8211; Toxic Avenger &#8211; Ghostland : des steelbooks Capelight à 13 euros",
+      "title": "Messe Noire &#8211; Foudu au Noir &#8211; Sanglante Paranoïa &#8211; L&#8217;Invasion des piranhas &#8211; La Compagnie des Loups : des steelcases en France",
       "source": "steelbookpro.fr",
-      "date": "2026-10-19",
-      "link": "https://steelbookpro.fr/2026/10/19/chucky-maxxxine-toxic-avenger-ghostland-des-steelbooks-capelight-a-13-euros/",
-      "detail": "&#160; &#8212; 19 octobre 2026 &#8212; Quatre steelbooks sont actuellement soldés chez Capelight (= steelbooks de qualité) (Allemagne, pas de [&#8230;]"
+      "date": "2026-10-20",
+      "link": "https://steelbookpro.fr/2026/10/20/messe-noire-foudu-au-noir-sanglante-paranoia-linvasion-des-piranhas-la-compagnie-des-loups-des-steelcases-en-france/",
+      "detail": "&#160; &#8212; 20 octobre 2026 &#8212; Voici cinq nouveaux steelcases à venir en France pour Halloween. Ils sont limités à [&#8230;]"
+    },
+    {
+      "id": "a_aHR0cHM6Ly9zdGVl",
+      "kind": "sortie",
+      "title": "Obi-Wan Kenobi &#8211; Andor &#8211; MoonKnight &#8211; Falcon et le Soldat de l&#8217;hiver : des steelbooks 4K [MAJ: Obi et Andor de retour]",
+      "source": "steelbookpro.fr",
+      "date": "2026-10-20",
+      "link": "https://steelbookpro.fr/2024/03/05/obi-wan-kenobi-andor-moonknight-falcon-et-le-soldat-de-lhiver-steelbook-4k/",
+      "detail": "&#160; &#8212; MAJ le 20 octobre 2026 &#8212; Les steelbooks 4K d&#8217;Andor et Obi-Wan Kenobi sont de nouveau disponibles sur [&#8230;]"
+    },
+    {
+      "id": "a_aHR0cHM6Ly9zdGVl",
+      "kind": "sortie",
+      "title": "Les Ensorceleuses : un steelbook 4K en France [MAJ: aperçu + rupture sauf chez Plaion]",
+      "source": "steelbookpro.fr",
+      "date": "2026-10-20",
+      "link": "https://steelbookpro.fr/2026/06/13/les-ensorceleuses-steelbook-4k/",
+      "detail": "&#160; &#8212; MAJ le 20 octobre 2026 &#8212;  Voici un aperçu : il est de finition spot-gloss + embossée (titre [&#8230;]"
     },
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
@@ -846,6 +837,15 @@
       "date": "2026-10-19",
       "link": "https://steelbookpro.fr/2026/10/19/nosferatu-2024-nouveau-steelbook-4k/",
       "detail": "&#160; &#8212;  19 octobre 2026 &#8212; Le film « Nosferatu » (2024) aura droit à un troisième steelbook 4K. Il est prévu [&#8230;]"
+    },
+    {
+      "id": "a_aHR0cHM6Ly9zdGVl",
+      "kind": "sortie",
+      "title": "Chucky &#8211; MaXXXine &#8211; Toxic Avenger &#8211; Ghostland : des steelbooks Capelight à 13 euros",
+      "source": "steelbookpro.fr",
+      "date": "2026-10-19",
+      "link": "https://steelbookpro.fr/2026/10/19/chucky-maxxxine-toxic-avenger-ghostland-des-steelbooks-capelight-a-13-euros/",
+      "detail": "&#160; &#8212; 19 octobre 2026 &#8212; Quatre steelbooks sont actuellement soldés chez Capelight (= steelbooks de qualité) (Allemagne, pas de [&#8230;]"
     },
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
@@ -875,13 +875,13 @@
       "detail": "AmazonAmazon lance l’opération 5 titres pour 30€ jusqu’au 31 décembre.Dispo via 2 liens !https://www.amazon.fr/promotion/psp/A482UFLMK36IUhttps://www.amazon.fr/"
     },
     {
-      "id": "a_aHR0cHM6Ly80ay11",
+      "id": "a_aHR0cHM6Ly9zdGVl",
       "kind": "sortie",
-      "title": "Le Monde de Narnia chapitre 1 4K Steelbook annonce",
-      "source": "4k-ultra-hd.fr",
+      "title": "Paddington : un steelbook 4K [US]",
+      "source": "steelbookpro.fr",
       "date": "2026-10-15",
-      "link": "https://4k-ultra-hd.fr/film/le-monde-de-narnia-chapitre-1-4k-steelbook",
-      "detail": "Nouvelle fiche détectée"
+      "link": "https://steelbookpro.fr/2026/10/15/paddington-steelbook-4k-us/",
+      "detail": "&#160; &#8212;  15 octobre 2026 &#8212; Le film « Paddington » aura droit à un steelbook 4K en Amérique. Au vu de [&#8230;]"
     },
     {
       "id": "a_aHR0cHM6Ly9zdGVl",
@@ -893,13 +893,13 @@
       "detail": "&#160; &#8212; 15 octobre 2026 &#8212; Le nouveau film «Stret Fighter» sortira en steelbook 4K en France. Pas encore de [&#8230;]"
     },
     {
-      "id": "a_aHR0cHM6Ly9zdGVl",
+      "id": "a_aHR0cHM6Ly80ay11",
       "kind": "sortie",
-      "title": "Paddington : un steelbook 4K [US]",
-      "source": "steelbookpro.fr",
+      "title": "Le Monde de Narnia chapitre 1 4K Steelbook annonce",
+      "source": "4k-ultra-hd.fr",
       "date": "2026-10-15",
-      "link": "https://steelbookpro.fr/2026/10/15/paddington-steelbook-4k-us/",
-      "detail": "&#160; &#8212;  15 octobre 2026 &#8212; Le film « Paddington » aura droit à un steelbook 4K en Amérique. Au vu de [&#8230;]"
+      "link": "https://4k-ultra-hd.fr/film/le-monde-de-narnia-chapitre-1-4k-steelbook",
+      "detail": "Nouvelle fiche détectée"
     }
   ]
 }
